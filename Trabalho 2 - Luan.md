@@ -43,7 +43,7 @@ Como objetivo inicial, o projeto visava a predição de morte para a COVID-19 at
 Após a escolha da COVID-19 como condição à qual seria predita a morte, deu-se inicio à etapa de mineração dos dados para os cenários um e dois, sendo seu objetivo a obtenção de um arquivo .csv com as variáveis de predição e a variável objetivo (prognóstico). Nesta etapa, foram utilizados os arquivos "patients.csv" e "condition.csv" para extrair da lista inicial de pacientes aqueles que foram diagnosticados com COVID-19, além de suas datas de nascimento, diagnóstico e morte. Em seguida, realizou-se a busca de cada um desses pacientes no arquivo "immunizations.csv" e criou-se uma nova coluna para que fossem categorizados em imunizados (1) e não-imunizados (0). 
 Visando um modelo mais assertivo, optou-se por discretizar o prognóstico de morte em 5 categorias: 
 
-1. Morre $$\leq 7$$ dias (1ª semana)
+1. Morre <img src="https://render.githubusercontent.com/render/math?math=\leq 7"> dias (1ª semana)
 2. $7<$ Morre $\leq 14$ (2ª semana)
 3. $14<$ Morre $\leq 21$ (3ª semana)
 4. $21<$ Morre $\leq 28$ (4ª semana)
