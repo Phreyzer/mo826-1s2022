@@ -2,11 +2,17 @@
 # Apresentação
 O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação [_Ciência e Visualização de Dados em Saúde_](https://ds4h.org/), oferecida no primeiro semestre de 2022, na Unicamp.
 
+
+<div align="center">
+	
+	
 Nome | RA | Especialização
 ----|--|-----
 Caroline Gerbaudo Nakazato | 168913 | Ciência da Computação
 Luan de Oliveira Silveira | 204099 | Ciência da Computação
 Wilson Bagni Junior | 010097 | Ciência da Computação
+</div>
+
 
 # Contextualização da Proposta
 
@@ -49,10 +55,10 @@ Como objetivo inicial, o projeto visava a predição de morte para a COVID-19 at
 Após a escolha da infecção pela COVID-19 como condição à qual seria predita a morte, deu-se inicio à etapa de mineração dos dados para os cenários um e dois, sendo seu objetivo a obtenção de um arquivo .csv com as variáveis de predição e a variável objetivo (prognóstico). Nesta etapa, foram utilizados os arquivos "patients.csv" e "condition.csv" para extrair da lista inicial de pacientes aqueles que foram diagnosticados com COVID-19, além de suas datas de nascimento, diagnóstico da condição e morte. Em seguida, realizou-se a busca de cada um desses pacientes no arquivo "immunizations.csv" e criou-se uma nova coluna para que fossem categorizados em imunizados (1) e não-imunizados (0). 
 Visando um modelo mais assertivo, optou-se por discretizar o prognóstico de morte em 5 categorias: 
 
-1. Morre $\leq 7$ dias (1ª semana)
-2. $7<$ Morre $\leq 14$ (2ª semana)
-3. $14<$ Morre $\leq 21$ (3ª semana)
-4. $21<$ Morre $\leq 28$ (4ª semana)
+1. Morre <img src="https://render.githubusercontent.com/render/math?math=\leq 7"> dias (1ª semana)
+2. <img src="https://render.githubusercontent.com/render/math?math=7<"> Morre <img src="https://render.githubusercontent.com/render/math?math=\leq 14"> (2ª semana)
+3. <img src="https://render.githubusercontent.com/render/math?math=14<"> Morre <img src="https://render.githubusercontent.com/render/math?math=\leq 21"> (3ª semana)
+4. <img src="https://render.githubusercontent.com/render/math?math=21<"> Morre <img src="https://render.githubusercontent.com/render/math?math=\leq 28"> (4ª semana)
 5. Sobreviveu
 
 A escolha destas 5 categorias foi feita devido à natureza da doença que tem uma duração média de 2 semanas, sendo também assumido que a partir de 1 mês do início da doença o paciente já estava fora do risco de morte.
@@ -109,7 +115,8 @@ Random Forest|0.789|0.931|0.898|0.867|0.931
 Logistic Regression|0.865|0.943|0.935|0.928|0.943
 
 Figura 1 - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
-![[Imagem2.png|400x400]]
+
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem1.png?raw=true">
 
 A partir da tabela 1 podemos ver que a regressão logística obteve uma performance superior a todos os outros métodos por todos os parâmetros comparativos. Já os demais métodos tiveram _scores_ aproximadamente iguais para as métricas CA, F1, _Precision_ e _Recall_, diferindo significativamente apenas para AUC
 
@@ -147,7 +154,7 @@ Random Forest|0.568|0.980|0.971|0.961|0.980
 Logistic Regression|0.480|0.971|0.966|0.961|0.971
 
 Figura 2 - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
-![[Imagem3.png|400x400]]
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem2.png?raw=true">
 
 Tabela 5 - Comparação dos modelos por AUC.
  -|KNN|SVM|Random Forest|Logistic Regression
@@ -169,7 +176,7 @@ Random Forest|0.820|0.966|0.960|0.954|0.966|0.345
 Logistic Regression|0.956|0.970|0.961|0.952|0.970|0.192
 
 Figura 3 - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
-![[Imagem4.png]]
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem3.png?raw=true">
 
 Tabela 5 - Comparação dos modelos por AUC.
  -|KNN|SVM|Random Forest|Logistic Regression
