@@ -77,6 +77,8 @@ Lived | Paciente Sobrevive
 A escolha destas 5 categorias foi feita devido à natureza da doença que tem uma duração média de 2 semanas, sendo também assumido que a partir de 1 mês do início da doença o paciente já estava fora do risco de morte.
 A categorização do paciente foi feita a partir da diferença de datas entre a morte do paciente e a data de diagnóstico da doença. Caso a data de morte fosse faltante no arquivo assumiu-se que o paciente sobreviveu e o mesmo foi categorizado em "Lived". O arquivo .csv final tem a seguinte forma:
 
+<div align="center">
+
 	
 PATIENT | BIRTHDATE   | DEATHDATE | START | IMMUNIZED | AGE | PROG 
 -|-|-|-|-|-|-
@@ -86,17 +88,18 @@ f2e5bd39-dc31-0471-1028-adee47891760 | 1976-05-17| NaN |11/26/2020| 1|44|Lived
 ...|...|...|...|...|...|...
 87 linhas x 7 colunas
 
+</div>
 	
 O código responsável pela extração dos dados foi elaborado em Python em um Jupyter Notebook que pode ser visualizado no arquivo "filtering_code.ipynb" no link https://github.com/Phreyzer/mo826-1s2022/tree/main/notebooks.
 
-Uma vez que temos os arquivos .csv com os dados filtrados, utilizamos o software Orange para realizar os seguintes modelos de classificações:
+Uma vez obtidos os arquivos .csv com os dados filtrados, utilizamos o software Orange para realizar os seguintes modelos de classificações:
 
 - Random Forest
 - KNN
 - Support Vector Machine
 - Logistic Regression
 
-Cada modelo será treinado/validado em um dos cenários e testados conforme indicado:
+Cada modelo foi treinado/validado em um dos cenários e testados em outros conforme indicado:
 
 <div align="center">
 
@@ -107,7 +110,7 @@ Cenário 2| Cenário 1
 Cenário 4| Cenários 1, 2 e 3 |
 </div>
 
-e para cada secção de treinamento/validação foi medida a performance dos modelos através da curva ROC, matriz de confusão e as predições feitas por cada um.
+Para cada secção de treinamento/validação foi medida a performance dos modelos através da curva ROC, matriz de confusão e as predições feitas por cada um.
 
 ## Bases Adotadas e Geradas para o Projeto
 
@@ -129,9 +132,12 @@ Os dados originais referentes aos arquivos "patients.csv", "condition.csv" e "im
 Os dados filtrados e os workflows do Orange para treinamento, validação e teste dos modelos estão disponíveis no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/src
 
 # Resultados e Discussão
-#### Treinamento no cenário 1 e validação no cenário 2 
+### Treinamento/validação no cenário 1 e Teste no cenário 2 
 
-*Tabela 1* - Resultado das avaliações treinados no cenário 1.
+**Tabela 1** - Resultado das avaliações treinados no cenário 1.
+<div align="center">
+
+
 Modelo|AUC|CA|F1|Precision|Recall
 ---|---|---|---|---|---
 KNN|0.795|0.920|0.892|0.866|0.920
@@ -139,27 +145,39 @@ SVM|0.536|0.931|0.898|0.867|0.931
 Random Forest|0.789|0.931|0.898|0.867|0.931
 Logistic Regression|0.865|0.943|0.935|0.928|0.943
 
+
+</div>	
+	
 **Figura 1** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem1.png?raw=true" >
 </div>
 
-A partir da tabela 1 podemos ver que a regressão logística obteve uma performance superior a todos os outros métodos por todos os parâmetros comparativos. Já os demais métodos tiveram _scores_ aproximadamente iguais para as métricas CA, F1, _Precision_ e _Recall_, diferindo significativamente apenas para AUC
+A partir da **Tabela 1** podemos ver que a regressão logística obteve uma performance superior a todos os outros métodos por todos os parâmetros comparativos. Já os demais métodos tiveram _scores_ aproximadamente iguais para as métricas CA, F1, _Precision_ e _Recall_, diferindo significativamente apenas para AUC.
 
 **Tabela 2** - Comparação dos modelos por AUC.
+<div align="center">
+	
+	
  -|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
 KNN||0.579|0.618|0.340
 SVM|0.421||0.427|0.358
 Random Forest|0.382|0.573||0.345
 Logistic Regression|0.660|0.642|0.655||
+	
+	
+</div>
 
-Através da tabela 2 temos a probabilidade de que o _score_ do modelo na linha seja superior ao modelo na coluna, por exemplo, P(KNN > SVM) = 0.579. Assumindo as probabilidades como representativas do cenário real temos que a ordem decrescente de desempenho mais provável é:
-Regressão Logística -> KNN -> Random Forest -> SVM 
+Através da **Tabela 2** temos a probabilidade de que o _score_ do modelo na linha seja superior ao modelo na coluna, por exemplo, P(KNN > SVM) = 0.579. Assumindo as probabilidades como representativas do cenário real temos que a ordem decrescente de desempenho mais provável é:
+Regressão Logística -> KNN -> Random Forest -> SVM.
 
-Agora validamos os classificadores treinados a partir do cenário 1 com os pacientes do cenário 2. Os _scores_ obtidos estão dispostos na table 3.
+Agora validamos os classificadores treinados a partir do cenário 1 com os pacientes do cenário 2. Os _scores_ obtidos estão dispostos na **Tabela 3**.
 
-**Tabela 3** - Resultado da validação (treinamento=cenário 1; validação=cenário 2).
+**Tabela 3** - Resultado do Teste (treinamento/validação=cenário 1; Teste=cenário 2).
+
+<div align="center">
+
 Modelo|AUC|CA|F1|Precision|Recall
 ---|---|---|---|---|---
 KNN|0.989|0.980|0.971|0.961|0.980
@@ -167,11 +185,16 @@ SVM|0.998|0.980|0.971|0.961|0.980
 Random Forest|1|0.980|0.971|0.961|0.980
 Logistic Regression|0.993|0.990|0.985|0.980|0.990
 
-A princípio, utilizando AUC como métrica principal de comparação vemos que o modelo _Random Forest_ aparenta obter o melhor desempenho, seguido do _SVM_, _Regressão Logística_, _KNN_. Entretanto, devido a baixa quantidade de pacientes no cenário de treinamento, os modelos estão enviesados a classificar o paciente como "Lived". Uma breve análise da predição dos modelos para cada paciente mostra que o _KNN_, _SVM_ e _Random Forest_ classificaram todos os 102 pacientes do cenário 2 como sobreviventes, enquanto apenas a _Regressão Logística_ acertou o prognóstico de um paciente que veio a falecer. Este fato pode ser observado pela coluna "_Recall_" da tabela 3, mostrando que o modelo de regressão logística acertou $101/102\approx0.990$ enquanto os demais acertaram $100/102\approx0.980$, ou seja, errando apenas os 2 dos 102 pacientes que vieram a óbito.
+</div>
 
-#### Treinamento no cenário 2 e validação no cenário 1 
+A princípio, utilizando AUC como métrica principal de comparação vemos que o modelo _Random Forest_ aparenta obter o melhor desempenho, seguido do _SVM_, _Regressão Logística_, _KNN_. Entretanto, devido a baixa quantidade de pacientes no cenário de treinamento, os modelos estão enviesados a classificar o paciente como "Lived". Uma breve análise da predição dos modelos para cada paciente mostra que o _KNN_, _SVM_ e _Random Forest_ classificaram todos os 102 pacientes do cenário 2 como sobreviventes, enquanto apenas a _Regressão Logística_ acertou o prognóstico de um paciente que veio a falecer. Este fato pode ser observado pela coluna "_Recall_" da **Tabela 3**, mostrando que o modelo de regressão logística acertou <img src="https://render.githubusercontent.com/render/math?math=101/102\approx0.990"> enquanto os demais acertaram <img src="https://render.githubusercontent.com/render/math?math=100/102\approx0.980">, ou seja, errando apenas os 2 dos 102 pacientes que vieram a óbito.
 
-*Tabela 4* - Resultado das avaliações dos modelos treinados no cenário 2.
+### Treinamento/Validação no cenário 2 e Teste no cenário 1 
+
+**Tabela 4** - Resultado das avaliações dos modelos treinados no cenário 2.
+
+<div align="center">
+
 Modelo|AUC|CA|F1|Precision|Recall
 ---|---|---|---|---|---
 KNN|0.485|0.980|0.971|0.961|0.980
@@ -179,23 +202,31 @@ SVM|0.328|0.980|0.971|0.961|0.980
 Random Forest|0.568|0.980|0.971|0.961|0.980
 Logistic Regression|0.480|0.971|0.966|0.961|0.971
 
+</div>
+	
 **Figura 2** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem2.png?raw=true">
 	</div>
 
 **Tabela 5** - Comparação dos modelos por AUC.
- -|KNN|SVM|Random Forest|Logistic Regression
+<div align="center">
+
+-|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
 KNN||0.911|0.344|0.059
 SVM|0.089||0.243|0.017
 Random Forest|0.656|0.757||0.333
 Logistic Regression|0.941|0.983|0.667||
+	
+</div>
 
-Observando a comparação dos modelos por AUC através da tabela 5 é tentador concluir que a _Logistic Regression_ é novamente superior aos demais modelos para este problema. Contudo, uma avaliação das predições de cada modelo vemos que todos os modelos classificaram os pacientes no grupo de sobreviventes, com exceção da _Logistic Regression_ que classificou um sobrevivente com o prognóstico de morte em 3 semanas. Está claro que a falta de dados e a baixa qualidade dos mesmos (apenas 2 pacientes morreram), enviesaram os modelos a classificarem qualquer exemplo como "_Lived_", os tornando precisos mas pouco específicos neste cenário.
+Observando a comparação dos modelos por AUC através da **Tabela 5** é tentador concluir que a _Logistic Regression_ é novamente superior aos demais modelos para este problema. Contudo, uma avaliação das predições de cada modelo vemos que todos os modelos classificaram os pacientes no grupo de sobreviventes, com exceção da _Logistic Regression_ que classificou um sobrevivente com o prognóstico de morte em 3 semanas. Está claro que a pouca quantidade de dados e o desbalanceamento dos mesmos (apenas 2 pacientes morreram), enviesaram os modelos a classificarem qualquer exemplo como "_Lived_", os tornando precisos mas pouco específicos neste cenário.
 
-#### Treinamento no cenário 4 e validação nos cenários 1,2 e 3
+### Treinamento no cenário 4 e validação nos cenários 1,2 e 3
 **Tabela 6** - Resultado das avaliações dos modelos treinados no cenário 4.
+<div align="center">
+	
 Modelo|AUC|CA|F1|Precision|Recall|Specificity
 ---|---|---|---|---|---|---
 KNN|0.706|0.963|0.959|0.954|0.963|0.316
@@ -203,29 +234,34 @@ SVM|0.651|0.970|0.955|0.941|0.970|0.030
 Random Forest|0.820|0.966|0.960|0.954|0.966|0.345
 Logistic Regression|0.956|0.970|0.961|0.952|0.970|0.192
 
-
+</div>
 
 **Figura 3** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem3.png?raw=true">
 </div>
 
-**Tabela 5** - Comparação dos modelos por AUC.
- -|KNN|SVM|Random Forest|Logistic Regression
+**Tabela 7** - Comparação dos modelos por AUC.
+
+<div align="center">
+
+-|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
 KNN||0.836|0.046|0.022
 SVM|0.164||0.080|0.044
 Random Forest|0.954|0.920||0.002
 Logistic Regression|0.978|0.956|0.998||
 
+</div>
+	
 Utilizando novamente o AUC como métrica de comparação, vemos que a ordem decrescente de desempenho é: _Logistic Regression_ -> _Random Forest_ -> KNN -> SVM
 
-Apesar dos _Scores_ _AUC_, _CA_, _F1_, _Precision_ e _Recall_ terem valores altos, uma melhor medida do desempenho dos modelos é a especificidade. Isto porque como a grande maioria dos pacientes sobreviveram à COVID-19, os modelos sempre tenderão a classificá-los como sobreviventes, sendo os casos em que o prognóstico é de morte uma melhor medida do seu desempenho. Por exemplo, suponhamos que um quinto modelo classifique todos os casos como sobreviventes. Neste caso, como 9863 dos 10168 pacientes sobreviveram, ele teria uma taxa de acerto de $9863/10168\approx0.9778$, se provando superior aos modelos treinados.  
+Apesar dos _Scores_ _AUC_, _CA_, _F1_, _Precision_ e _Recall_ terem valores altos, uma melhor medida do desempenho dos modelos é a especificidade. Isto porque como a grande maioria dos pacientes sobreviveram à COVID-19, os modelos sempre tenderão a classificá-los como sobreviventes, sendo os casos em que o prognóstico é de morte uma melhor medida do seu desempenho. Por exemplo, suponhamos que um quinto modelo classifique todos os casos como sobreviventes. Neste caso, como 9863 dos 10168 pacientes sobreviveram, ele teria uma taxa de acerto de <img src="https://render.githubusercontent.com/render/math?math=9863/10168\approx0.9778">, provando-se superior aos modelos treinados.  
 
 # Conclusão
-O treinamento dos diversos modelos evidenciou a importância que a quantidade de dados tem no seu treinamento. Entretanto, é a qualidade dos dados que exerceu um papel significativo no modelo final. Por ser uma doença com uma baixa mortalidade, os modelos treinados se mostraram enviesados ao prognóstico de recuperação, apresentando uma alta acurácia mas sacrificando sensibilidade, o que é conhecido como paradoxo da acurácia. 
-Uma possível solução para esse problema seria a adição de parâmetros mais impactantes para o prognóstico, como a presença ou não de problemas respiratórios ou obesidade, o que tornaria a distinção entre casos mais evidente.
-
+O presente projeto permitiu aos seus integrantes trabalhar com dados sintéticos, aplicando técnicas tratamento de dados e também modelos de aprendizado de máquina.
+O treinamento dos diversos modelos evidenciou a importância que a quantidade e a qualidade dos dados têm no seu treinamento. Entretanto, é a qualidade dos dados que exerceu um papel significativo no modelo final. Por ser uma doença com uma baixa mortalidade, os modelos treinados se mostraram enviesados ao prognóstico de recuperação, apresentando uma alta acurácia mas sacrificando sensibilidade, o que é conhecido como paradoxo da acurácia. 
+Uma possível solução para esse problema seria a adição de parâmetros mais impactantes para o prognóstico, como a presença ou não de problemas respiratórios ou obesidade, o que tornaria a distinção entre casos mais evidente. Outra soluçãi poderia ser a de utilizar ténicas como _Undersampling_, _Oversampling_ ou _SMOTE_[2] para lidar com o desbalanceamento dos dados do projeto.
 
 
 # Referências Bibliográficas
