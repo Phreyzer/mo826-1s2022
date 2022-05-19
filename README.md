@@ -111,8 +111,6 @@ e para cada secção de treinamento/validação foi medida a performance dos mod
 
 ## Bases Adotadas e Geradas para o Projeto
 
-Os dados originais referentes aos arquivos "patients.csv", "condition.csv" e "immunizations.csv" dos cenários 1 e 2 podem ser acessados no link https://github.com/Phreyzer/mo826-1s2022/tree/main/data/raw. Os dados dos cenários 3 e 4, por serem grandes demais no armezanamento do GitHub não foram disponibilizados.
-
 Um resumo da quantidade de pacientes nos cenários antes e depois da filtragem dos dados segue abaixo:
 
 <div align="center">
@@ -126,12 +124,14 @@ scenario04 | 117.532 | 10.168 |
 
 </div>
 
+Os dados originais referentes aos arquivos "patients.csv", "condition.csv" e "immunizations.csv" dos cenários 1 e 2 podem ser acessados no link https://github.com/Phreyzer/mo826-1s2022/tree/main/data/raw. Os dados dos cenários 3 e 4, por serem grandes demais no armezanamento do GitHub não foram disponibilizados.
 
+Os dados filtrados e os workflows do Orange para treinamento, validação e teste dos modelos estão disponíveis no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/src
 
 # Resultados e Discussão
 #### Treinamento no cenário 1 e validação no cenário 2 
 
-Tabela 1 - Resultado das avaliações treinados no cenário 1.
+*Tabela 1* - Resultado das avaliações treinados no cenário 1.
 Modelo|AUC|CA|F1|Precision|Recall
 ---|---|---|---|---|---
 KNN|0.795|0.920|0.892|0.866|0.920
@@ -139,13 +139,14 @@ SVM|0.536|0.931|0.898|0.867|0.931
 Random Forest|0.789|0.931|0.898|0.867|0.931
 Logistic Regression|0.865|0.943|0.935|0.928|0.943
 
-Figura 1 - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
-
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem1.png?raw=true">
+**Figura 1** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
+<div align="center">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem1.png?raw=true" >
+</div>
 
 A partir da tabela 1 podemos ver que a regressão logística obteve uma performance superior a todos os outros métodos por todos os parâmetros comparativos. Já os demais métodos tiveram _scores_ aproximadamente iguais para as métricas CA, F1, _Precision_ e _Recall_, diferindo significativamente apenas para AUC
 
-Tabela 2 - Comparação dos modelos por AUC.
+**Tabela 2** - Comparação dos modelos por AUC.
  -|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
 KNN||0.579|0.618|0.340
@@ -158,7 +159,7 @@ Regressão Logística -> KNN -> Random Forest -> SVM
 
 Agora validamos os classificadores treinados a partir do cenário 1 com os pacientes do cenário 2. Os _scores_ obtidos estão dispostos na table 3.
 
-Tabela 3 - Resultado da validação (treinamento=cenário 1; validação=cenário 2).
+**Tabela 3** - Resultado da validação (treinamento=cenário 1; validação=cenário 2).
 Modelo|AUC|CA|F1|Precision|Recall
 ---|---|---|---|---|---
 KNN|0.989|0.980|0.971|0.961|0.980
@@ -170,7 +171,7 @@ A princípio, utilizando AUC como métrica principal de comparação vemos que o
 
 #### Treinamento no cenário 2 e validação no cenário 1 
 
-Tabela 4 - Resultado das avaliações dos modelos treinados no cenário 2.
+*Tabela 4* - Resultado das avaliações dos modelos treinados no cenário 2.
 Modelo|AUC|CA|F1|Precision|Recall
 ---|---|---|---|---|---
 KNN|0.485|0.980|0.971|0.961|0.980
@@ -178,10 +179,12 @@ SVM|0.328|0.980|0.971|0.961|0.980
 Random Forest|0.568|0.980|0.971|0.961|0.980
 Logistic Regression|0.480|0.971|0.966|0.961|0.971
 
-Figura 2 - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
+**Figura 2** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
+<div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem2.png?raw=true">
+	</div>
 
-Tabela 5 - Comparação dos modelos por AUC.
+**Tabela 5** - Comparação dos modelos por AUC.
  -|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
 KNN||0.911|0.344|0.059
@@ -192,7 +195,7 @@ Logistic Regression|0.941|0.983|0.667||
 Observando a comparação dos modelos por AUC através da tabela 5 é tentador concluir que a _Logistic Regression_ é novamente superior aos demais modelos para este problema. Contudo, uma avaliação das predições de cada modelo vemos que todos os modelos classificaram os pacientes no grupo de sobreviventes, com exceção da _Logistic Regression_ que classificou um sobrevivente com o prognóstico de morte em 3 semanas. Está claro que a falta de dados e a baixa qualidade dos mesmos (apenas 2 pacientes morreram), enviesaram os modelos a classificarem qualquer exemplo como "_Lived_", os tornando precisos mas pouco específicos neste cenário.
 
 #### Treinamento no cenário 4 e validação nos cenários 1,2 e 3
-Tabela 6 - Resultado das avaliações dos modelos treinados no cenário 4.
+**Tabela 6** - Resultado das avaliações dos modelos treinados no cenário 4.
 Modelo|AUC|CA|F1|Precision|Recall|Specificity
 ---|---|---|---|---|---|---
 KNN|0.706|0.963|0.959|0.954|0.963|0.316
@@ -200,10 +203,14 @@ SVM|0.651|0.970|0.955|0.941|0.970|0.030
 Random Forest|0.820|0.966|0.960|0.954|0.966|0.345
 Logistic Regression|0.956|0.970|0.961|0.952|0.970|0.192
 
-Figura 3 - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem3.png?raw=true">
 
-Tabela 5 - Comparação dos modelos por AUC.
+
+**Figura 3** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
+<div align="center">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem3.png?raw=true">
+</div>
+
+**Tabela 5** - Comparação dos modelos por AUC.
  -|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
 KNN||0.836|0.046|0.022
