@@ -261,7 +261,7 @@ Apesar dos _Scores_ _AUC_, _CA_, _F1_, _Precision_ e _Recall_ terem valores alto
 # Conclusão
 O presente projeto permitiu aos seus integrantes trabalhar com dados sintéticos, aplicando técnicas tratamento de dados e também modelos de aprendizado de máquina.
 O treinamento dos diversos modelos evidenciou a importância que a quantidade e a qualidade dos dados têm no seu treinamento. Entretanto, é a qualidade dos dados que exerceu um papel significativo no modelo final. Por ser uma doença com uma baixa mortalidade, os modelos treinados se mostraram enviesados ao prognóstico de recuperação, apresentando uma alta acurácia mas sacrificando sensibilidade, o que é conhecido como paradoxo da acurácia. 
-Uma possível solução para esse problema seria a adição de parâmetros mais impactantes para o prognóstico, como a presença ou não de problemas respiratórios ou obesidade, o que tornaria a distinção entre casos mais evidente. Outra soluçãi poderia ser a de utilizar ténicas como _Undersampling_, _Oversampling_ ou _SMOTE_[2] para lidar com o desbalanceamento dos dados do projeto.
+Uma possível solução para esse problema seria a adição de parâmetros mais impactantes para o prognóstico, como a presença ou não de problemas respiratórios ou obesidade, o que tornaria a distinção entre casos mais evidente. Outra solução poderia ser a de utilizar ténicas como _Undersampling_, _Oversampling_ ou _SMOTE_[2] para lidar com o desbalanceamento dos dados do projeto.
 
 
 # Referências Bibliográficas
