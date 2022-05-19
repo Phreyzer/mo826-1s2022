@@ -77,6 +77,7 @@ Lived | Paciente Sobrevive
 A escolha destas 5 categorias foi feita devido à natureza da doença que tem uma duração média de 2 semanas, sendo também assumido que a partir de 1 mês do início da doença o paciente já estava fora do risco de morte.
 A categorização do paciente foi feita a partir da diferença de datas entre a morte do paciente e a data de diagnóstico da doença. Caso a data de morte fosse faltante no arquivo assumiu-se que o paciente sobreviveu e o mesmo foi categorizado em "Lived". O arquivo .csv final tem a seguinte forma:
 
+	
 PATIENT | BIRTHDATE   | DEATHDATE | START | IMMUNIZED | AGE | PROG 
 -|-|-|-|-|-|-
 c87c02ef-6b7a-224c-4513-1b85e19573b9 |1998-11-21|NaN | 11/25/2020 | 1 |22 |Lived
@@ -85,9 +86,8 @@ f2e5bd39-dc31-0471-1028-adee47891760 | 1976-05-17| NaN |11/26/2020| 1|44|Lived
 ...|...|...|...|...|...|...
 87 linhas x 7 colunas
 
+	
 O código responsável pela extração dos dados foi elaborado em Python em um Jupyter Notebook que pode ser visualizado no arquivo "filtering_code.ipynb" no link https://github.com/Phreyzer/mo826-1s2022/tree/main/notebooks.
-
-Os dados filtrados para cada
 
 Uma vez que temos os arquivos .csv com os dados filtrados, utilizamos o software Orange para realizar os seguintes modelos de classificações:
 
@@ -96,31 +96,37 @@ Uma vez que temos os arquivos .csv com os dados filtrados, utilizamos o software
 - Support Vector Machine
 - Logistic Regression
 
-Cada modelo será treinado em um dos cenários e testados conforme indicado:
+Cada modelo será treinado/validado em um dos cenários e testados conforme indicado:
 
-Treinamento | Validação
+<div align="center">
+
+Treinamento/Validação | Teste
 -|-
-Cenário 1|Cenário 2
-Cenário 2|Cenário 1
-Cenário 4|Cenários 1, 2 e 3
+Cenário 1| Cenário 2
+Cenário 2| Cenário 1
+Cenário 4| Cenários 1, 2 e 3 |
+</div>
 
-e para cada secção de treinamento/validação será medida a performance dos modelos através da curva ROC, matriz de confusão e as predições feitas por cada um.
+e para cada secção de treinamento/validação foi medida a performance dos modelos através da curva ROC, matriz de confusão e as predições feitas por cada um.
 
-## Bases Adotadas para o Estudo
-1.   scenario01
-	- Raw: 1175 pacientes
-	- Filtered: 87 pacientes
-2.   scenario02
-	- Raw: 1122 pacientes
-	- Filtered: 102 pacientes 
-3.   scenario03
-	- Raw: 11574 pacientes
-	- Filtered: 986 pacientes
-4.   scenario04
-	- Raw: 117532 pacientes
-	- Filtered: 10168 pacientes
+## Bases Adotadas e Geradas para o Projeto
 
 Os dados originais referentes aos arquivos "patients.csv", "condition.csv" e "immunizations.csv" dos cenários 1 e 2 podem ser acessados no link https://github.com/Phreyzer/mo826-1s2022/tree/main/data/raw. Os dados dos cenários 3 e 4, por serem grandes demais no armezanamento do GitHub não foram disponibilizados.
+
+Um resumo da quantidade de pacientes nos cenários antes e depois da filtragem dos dados segue abaixo:
+
+<div align="center">
+	
+| Cenário(nome da base) | Quantidade de Pacientes Iniciais | Quantidade de pacientes após filtragem
+|-|-|-
+scenario01 | 1175  |  87 
+scenario02 | 1122  | 102 
+scenario03 | 11.574 | 986 
+scenario04 | 117.532 | 10.168 |
+
+</div>
+
+
 
 # Resultados e Discussão
 #### Treinamento no cenário 1 e validação no cenário 2 
