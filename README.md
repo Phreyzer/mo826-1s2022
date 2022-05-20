@@ -58,7 +58,7 @@ Como objetivo inicial, o projeto visava a predição de morte para a COVID-19 at
 - Jupyter Notebook
 
 # Metodologia
-Após a escolha da infecção pela COVID-19 como condição à qual seria predita a morte, deu-se inicio à etapa de mineração dos dados para os cenários um e dois, sendo seu objetivo a obtenção de um arquivo .csv com as variáveis de predição e a variável objetivo (prognóstico). Nesta etapa, foram utilizados os arquivos "patients.csv" e "condition.csv" para extrair da lista inicial de pacientes aqueles que foram diagnosticados com COVID-19, além de suas datas de nascimento, diagnóstico da condição e morte. Em seguida, realizou-se a busca de cada um desses pacientes no arquivo "immunizations.csv" e criou-se uma nova coluna para que fossem categorizados em imunizados (1) e não-imunizados (0). 
+Após a escolha da infecção pela COVID-19 como condição à qual seria predita a morte, deu-se inicio à etapa de mineração dos dados para os cenários um e dois, sendo seu objetivo a obtenção de um arquivo .csv com as variáveis de predição e a variável objetivo (prognóstico). Nesta etapa, foram utilizados os arquivos "patients.csv" e "condition.csv" para extrair da lista inicial de pacientes aqueles que foram diagnosticados com COVID-19, além de suas datas de nascimento, etnia (RACE e ETHNICITY), gênero, diagnóstico da condição e morte. Em seguida, realizou-se a busca de cada um desses pacientes no arquivo "immunizations.csv" e criou-se uma nova coluna para que fossem categorizados em imunizados (1) e não-imunizados (0). 
 Visando um modelo mais assertivo, optou-se por discretizar o prognóstico de morte em 5 categorias: 
 
 <div align="center">
@@ -79,17 +79,18 @@ A categorização do paciente foi feita a partir da diferença de datas entre a 
 
 <div align="center">
 
-	
-PATIENT | BIRTHDATE   | DEATHDATE | START | IMMUNIZED | AGE | PROG 
--|-|-|-|-|-|-
-c87c02ef-6b7a-224c-4513-1b85e19573b9 |1998-11-21|NaN | 11/25/2020 | 1 |22 |Lived
-4868d84d-7a09-477a-da7c-3fbb8edf3e19|1989-10-28|NaN|1/1/2021|1|31|Lived
-f2e5bd39-dc31-0471-1028-adee47891760 | 1976-05-17| NaN |11/26/2020| 1|44|Lived
-...|...|...|...|...|...|...
-87 linhas x 7 colunas
+PATIENT|BIRTHDATE|DEATHDATE|RACE|ETHNICITY|GENDER|START|IMMUNIZED|AGE|PROG
+-|-|-|-|-|-|-|-|-|-
+c87c02ef-6b7a-224c-4513-1b85e19573b9|1998-11-21|NaN|white|	nonhispanic|	F|	11/25/2020|	1|	22	|Lived
+4868d84d-7a09-477a-da7c-3fbb8edf3e19|1989-10-28	|NaN|white|	nonhispanic|	M|	1/1/2021|	1|	31	|Lived
+f2e5bd39-dc31-0471-1028-adee47891760|1976-05-17|NaN|white|	nonhispanic|	F|	11/26/2020|	1|	44	|Lived
+77e53fde-d641-fa26-5792-7a92af4fa260|2018-10-19	|NaN|white|	nonhispanic|	M|	2/17/2021|	0|	2	|Lived
+850c346b-9bed-1a8b-c452-165705841a8b|1995-01-10	|NaN|white|	nonhispanic|	M|	11/26/2020|	0|	25	|Lived
+...|...|...|...|...|...|...|...|...|...
 
 </div>
-	
+
+
 O código responsável pela extração dos dados foi elaborado em Python em um Jupyter Notebook que pode ser visualizado no arquivo "filtering_code.ipynb" no link https://github.com/Phreyzer/mo826-1s2022/tree/main/notebooks.
 
 Uma vez obtidos os arquivos .csv com os dados filtrados, utilizamos o software Orange para realizar os seguintes modelos de classificações:
@@ -109,6 +110,8 @@ Cenário 1| Cenário 2
 Cenário 2| Cenário 1
 Cenário 4| Cenários 1, 2 e 3 |
 </div>
+
+Os modelos foram treinados com base nos dados na caracteríticas (_features_) "RACE", "ETHNICITY", "GENDER", "IMMUNIZED e "AGE" e como rótulo foi utilizada a coluna "PROG". Todas as características são categóricas, com exceção da idade ("AGE") que é numérica.
 
 Para cada secção de treinamento/validação foi medida a performance dos modelos através da curva ROC, matriz de confusão e as predições feitas por cada um.
 
