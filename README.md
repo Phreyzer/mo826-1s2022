@@ -58,7 +58,7 @@ Como objetivo inicial, o projeto visava a predição de morte para a COVID-19 at
 - Jupyter Notebook
 
 # Metodologia
-Após a escolha da infecção pela COVID-19 como condição à qual seria predita a morte, deu-se inicio à etapa de mineração dos dados para os cenários um e dois, sendo seu objetivo a obtenção de um arquivo .csv com as variáveis de predição e a variável objetivo (prognóstico). Nesta etapa, foram utilizados os arquivos "patients.csv" e "condition.csv" para extrair da lista inicial de pacientes aqueles que foram diagnosticados com COVID-19, além de suas datas de nascimento, etnia (RACE e ETHNICITY), gênero, diagnóstico da condição e morte. Em seguida, realizou-se a busca de cada um desses pacientes no arquivo "immunizations.csv" e criou-se uma nova coluna para que fossem categorizados em imunizados (1) e não-imunizados (0). 
+Após a escolha da infecção pela COVID-19 como condição à qual seria predita a morte, deu-se inicio à etapa de mineração dos dados para os cenários um e dois, sendo seu objetivo a obtenção de um arquivo .csv com as variáveis de predição e a variável objetivo (prognóstico). Nesta etapa, foram utilizados os arquivos "patients.csv" e "condition.csv" para extrair da lista inicial de pacientes aqueles que foram diagnosticados com COVID-19, além de suas datas de nascimento, cor de pele, etnia, gênero, diagnóstico da condição e morte. Em seguida, realizou-se a busca de cada um desses pacientes no arquivo "immunizations.csv" e criou-se uma nova coluna para que fossem categorizados em imunizados (1) e não-imunizados (0). 
 Visando um modelo mais assertivo, optou-se por discretizar o prognóstico de morte em 5 categorias: 
 
 <div align="center">
