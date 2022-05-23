@@ -148,10 +148,12 @@ SVM|0.494|0.944|0.971|0.944|1.000|0.000
 Random Forest|0.932|0.967|0.983|0.966|1.000|0.400
 Logistic Regression|0.971|0.978|0.988|0.988|0.988|0.800
 
+</div>	
+
 A tabela 1 é o resultado do treinamento dos respectivos modelos no cenário 1. Foi feita uma divisão de 80% dos dados para treinamento e 20% para validação, e os resultados indicam os desempenhos para o _Target class_ como a categoria "Lived", ou sobreviventes.
 Inicialmente, levando em conta a métrica _AUC_ (_Area Under Curve), ou seja, a área sob a curva ROC, como principal método de comparação vemos que a ordem decrescente de desempenho é _Logistic Regression_ > _Random Forest_ > KNN > SVM. Podemos visualizar este resultado também através das curvas ROC conforme a figura 1.
 	
-</div>	
+
 	
 **Figura 1** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
