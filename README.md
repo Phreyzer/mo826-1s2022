@@ -241,16 +241,19 @@ Logistic Regression|0.941|0.983|0.773||
 
 Observando a comparação dos modelos por AUC através da **Tabela 5** é tentador concluir que a _Logistic Regression_ é novamente superior aos demais modelos para este problema. Contudo, uma avaliação das predições de cada modelo vemos que o modelo _KNN_ e _SVM_ classificaram todos os pacientes no grupo de sobreviventes, enquanto que a _Logistic Regression_ e _Random Forest_ erroneamente classificaram um sobrevivente no grupo de morte na 3ª semana, e os demais como sobreviventes. Está claro que a pouca quantidade de dados e o desbalanceamento dos mesmos (apenas 2 pacientes morreram), enviesaram os modelos a classificarem qualquer exemplo como "_Lived_", os tornando precisos mas pouco específicos neste cenário.
 
-### Treinamento no cenário 4 e validação nos cenários 1,2 e 3
+### Treinamento no cenário 4 e validação nos cenários 1, 2 e 3
+
+Finalmente, realizamos os mesmos procedimentos para o cenário 4, o qual possui cerca de 10000 pacientes. As métricas de desempenho, a curva ROC e a comparação probabilística pela _AUC_ se encontram na __Tabela 6__, __Figura 3__ e __Tabela 7__ respectivamente. 
+
 **Tabela 6** - Resultado das avaliações dos modelos treinados no cenário 4.
 <div align="center">
 	
 Modelo|AUC|CA|F1|Precision|Recall|Specificity
 ---|---|---|---|---|---|---
-KNN|0.706|0.963|0.959|0.954|0.963|0.316
-SVM|0.651|0.970|0.955|0.941|0.970|0.030
-Random Forest|0.820|0.966|0.960|0.954|0.966|0.345
-Logistic Regression|0.956|0.970|0.961|0.952|0.970|0.192
+KNN|0.810|0.971|0.985|0.979|0.991|0.328
+SVM|0.662|0.970|0.985|0.971|0.999|0.036
+Random Forest|0.874|0.972|0.986|0.980|0.992|0.338
+Logistic Regression|0.964|0.972|0.986|0.975|0.997|0.167
 
 </div>
 
@@ -265,21 +268,21 @@ Logistic Regression|0.956|0.970|0.961|0.952|0.970|0.192
 
 -|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
-KNN||0.836|0.046|0.022
-SVM|0.164||0.080|0.044
-Random Forest|0.954|0.920||0.002
-Logistic Regression|0.978|0.956|0.998||
+KNN||0.942|0.033|0.010
+SVM|0.058||0.016|0.005
+Random Forest|0.967|0.984||0.005
+Logistic Regression|0.990|0.995|0.995||
 
 </div>
 	
-Utilizando novamente o AUC como métrica de comparação, vemos que a ordem decrescente de desempenho é: _Logistic Regression_ -> _Random Forest_ -> KNN -> SVM
-
-Apesar dos _Scores_ _AUC_, _CA_, _F1_, _Precision_ e _Recall_ terem valores altos, uma melhor medida do desempenho dos modelos é a especificidade. Isto porque como a grande maioria dos pacientes sobreviveram à COVID-19, os modelos sempre tenderão a classificá-los como sobreviventes, sendo os casos em que o prognóstico é de morte uma melhor medida do seu desempenho. Por exemplo, suponhamos que um quinto modelo classifique todos os casos como sobreviventes. Neste caso, como 9863 dos 10168 pacientes sobreviveram, ele teria uma taxa de acerto de <img src="https://render.githubusercontent.com/render/math?math=9863/10168\approx0.9778">, provando-se superior aos modelos treinados.  
+Utilizando novamente o AUC como métrica de comparação, vemos que a ordem decrescente de desempenho é: _Logistic Regression_ > _Random Forest_ > KNN > SVM, compartilhando a tendência dos demais onde a _Logistic Regression_ obteve o melhor desempenho e _SVM_ o pior.
 
 # Conclusão
 O presente projeto permitiu aos seus integrantes trabalhar com dados sintéticos, aplicando técnicas tratamento de dados e também modelos de aprendizado de máquina.
-O treinamento dos diversos modelos evidenciou a importância que a quantidade e a qualidade dos dados têm no seu treinamento. Entretanto, é a qualidade dos dados que exerceu um papel significativo no modelo final. Por ser uma doença com uma baixa mortalidade, os modelos treinados se mostraram enviesados ao prognóstico de recuperação, apresentando uma alta acurácia mas sacrificando sensibilidade, o que é conhecido como paradoxo da acurácia. 
+O treinamento dos diversos modelos evidenciou a importância que a quantidade e a qualidade dos dados têm no seu treinamento. Entretanto, é a qualidade dos dados que exerceu um papel significativo no modelo final. Por ser uma doença com uma baixa mortalidade, os modelos treinados se mostraram enviesados ao prognóstico de recuperação, apresentando uma alta acurácia e precisão mas sacrificando especificidade, o que é conhecido como paradoxo da acurácia. Uma análise comparativa dos métodos em cada cenário mostra que a _Logistic Regression_ apresentou a melhor performance em todos os casos, potencialmente indicando que seu uso é preferível em casos onde há um alto desbalanço na frequência de alguns grupos. Já o modelo _SVM_ apresentou a pior performance em todos cenários, o que evidenciou sua dependência com a qualidade dos dados. Os modelos _Random Forest_ e _KNN_ possuíram performances semelhantes e se alternam como segundo melhor modelo.
+
 Uma possível solução para esse problema seria a adição de parâmetros mais impactantes para o prognóstico, como a presença ou não de problemas respiratórios ou obesidade, o que tornaria a distinção entre casos mais evidente. Outra solução poderia ser a de utilizar ténicas como _Undersampling_, _Oversampling_ ou _SMOTE_[2] para lidar com o desbalanceamento dos dados do projeto.
+
 
 
 # Referências Bibliográficas
