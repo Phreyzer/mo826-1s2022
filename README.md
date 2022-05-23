@@ -143,14 +143,14 @@ Os dados filtrados e os workflows do Orange para treinamento, validação e test
 
 Modelo|AUC|CA|F1|Precision|Recall|Specificity
 ---|---|---|---|---|---|---
-KNN|0.888|0.978|0.988|0.988|0.988|0.800
-SVM|0.494|0.944|0.971|0.944|1.000|0.000	
-Random Forest|0.932|0.967|0.983|0.966|1.000|0.400
-Logistic Regression|0.971|0.978|0.988|0.988|0.988|0.800
+KNN|0.792|0.920|0.958|0.930|0.988|0.000
+SVM|0.565|0.931|0.964|0.931|1.000|0.000	
+Random Forest|0.717|0.931|0.964|0.931|1.000|0.000
+Logistic Regression|0.913|0.954|0.976|0.964|0.988|0.500
 
 </div>	
 
-A tabela 1 é o resultado do treinamento dos respectivos modelos no cenário 1. Foi feita uma divisão de 80% dos dados para treinamento e 20% para validação, e os resultados indicam os desempenhos para o _Target class_ como a categoria "Lived", ou sobreviventes.
+A __Tabela 1__ é o resultado do treinamento dos respectivos modelos no cenário 1. Foi feita uma divisão em apenas 2 _folds_ devido aos poucos dados, e em seguida a validação cruzada entre os mesmos. Os resultados indicam os desempenhos para o _Target class_ como a categoria "Lived", ou sobreviventes.
 
 - _AUC_: (_Area Under Curve_) É a área sob a curva ROC para cada modelo.
 - _CA_: (Classification Accuracy) É a proporção de exemplos classificados corretamente.
@@ -160,9 +160,9 @@ A tabela 1 é o resultado do treinamento dos respectivos modelos no cenário 1. 
 - _Specificity_: Proporção entre pessoas que foram corretamente classificadas como não-sobreviventes (categorias 1,2,3 e 4) e o total de pessoas que realmente não sobreviveram.
 
 Inicialmente, observando somente as métricas _CA_, _F1_, _Precision_ e _Recall_, poderiamos concluir prematuramente que os modelos obteveram um bom resultado devido aos altos valores obtidos. Entretanto, precisamos levar em consideração a qualidade dos dados de treinamento. O cenário 1 consiste em 87 pacientes dos quais 81 sobreviveram, portanto mesmo um modelo que classificasse todos pacientes que recebesse como sobreviventes possuiria as métricas _Recall_=_Precision_=_F1_= 81/87 = 0.931, e teriamos até mesmo a acurácia igual a 81/87, já que é a proporção de exemplos classificados corretamente. Portanto, as medidas descritas não seriam uma boa medida de desempenho para o problema em questão. Olhamos agora para a informação contida na medida _Specificity_.
-Como o cenário 1 está desbalanceado e possui uma grande proporção de pacientes de um único grupo, podemos supor que os modelos estarão enviesados a classificar os pacientes como "Lived". Apesar das demais medidas de comparação estarem comprometidas devido a este desbalanceamento, a _Specificity_ é uma medida leva em consideração os pacientes que foram classificados corretamente como não-sobreviventes, punindo modelos que erroneamente classificam os pacientes como sobreviventes. Portanto, olhamos para a especificidade para comparar os modelos e obtemos a seguinte ordem decrescente de desempenho: _Logistic Regression_ = _KNN_ > _Random Forest_ > _SVM_, onde o _SVM_ classificou todos os pacientes como sobreviventes e apresentou o pior desempenho.
+Como o cenário 1 está desbalanceado e possui uma grande proporção de pacientes de um único grupo, podemos supor que os modelos estarão enviesados a classificar os pacientes como "Lived". Apesar das demais medidas de comparação estarem comprometidas devido a este desbalanceamento, a _Specificity_ é uma medida leva em consideração os pacientes que foram classificados corretamente como não-sobreviventes, punindo modelos que erroneamente classificam os pacientes como sobreviventes. Portanto, olhamos para a especificidade para comparar os modelos e obtemos a seguinte ordem decrescente de desempenho: _Logistic Regression_ > _KNN_ = _Random Forest_ = _SVM_, onde o _KNN_,_SVM_ e _Random Forest_ não classificaram nenhum não-sobrevivente corretamente.
 
-A segunda métrica que podemos utilizar é a _AUC_, ou a área sob a curva ROC, uma vez que seu valor também depende da _Specificity_ e favorece modelos menos enviesados pela má qualidade dos dados. Neste caso, a partir da __Tabela 1__ obtemos a seguinte ordem decrescente de desempenho: _Logistic Regression_ > _Random Forest_ > _KNN_ >  > _SVM_. Podemos visualizar este resultado também através das curvas ROC conforme a figura 1, onde vemos que a curva da _Logistic Regression_ domina as demais, seguida pela _Random Forest_, _KNN_ e finalmente _SVM_ com o pior desempenho.
+A segunda métrica que podemos utilizar é a _AUC_, ou a área sob a curva ROC, uma vez que seu valor também depende da _Specificity_ e favorece modelos menos enviesados pela má qualidade dos dados. Neste caso, a partir da __Tabela 1__ obtemos a seguinte ordem decrescente de desempenho: _Logistic Regression_ > _KNN_ > _Random Forest_ > _SVM_. Podemos visualizar este resultado também através das curvas ROC conforme a figura 1, onde vemos que a curva da _Logistic Regression_ domina as demais, seguida pela _Random Forest_, _KNN_ e finalmente _SVM_ com o pior desempenho.
 	
 **Figura 1** - Curvas ROC (Rosa->_Logistic Regression_; Verde->_KNN_; Laranja->_Random Forest_; Azul->_SVM_).
 <div align="center">
@@ -172,7 +172,6 @@ A segunda métrica que podemos utilizar é a _AUC_, ou a área sob a curva ROC, 
 
 **Tabela 2** - Comparação dos modelos por AUC.
 <div align="center">
-	
 	
  -|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
