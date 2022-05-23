@@ -141,14 +141,16 @@ Os dados filtrados e os workflows do Orange para treinamento, validação e test
 <div align="center">
 
 
-Modelo|AUC|CA|F1|Precision|Recall
----|---|---|---|---|---
-KNN|0.795|0.920|0.892|0.866|0.920
-SVM|0.536|0.931|0.898|0.867|0.931
-Random Forest|0.789|0.931|0.898|0.867|0.931
-Logistic Regression|0.865|0.943|0.935|0.928|0.943
+Modelo|AUC|CA|F1|Precision|Recall|Specificity
+---|---|---|---|---|---|---
+KNN|0.888|0.978|0.988|0.988|0.988|0.800
+SVM|0.494|0.944|0.971|0.944|1.000|0.000	
+Random Forest|0.932|0.967|0.983|0.966|1.000|0.400
+Logistic Regression|0.971|0.978|0.988|0.988|0.988|0.800
 
-
+A tabela 1 é o resultado do treinamento dos respectivos modelos no cenário 1. Foi feita uma divisão de 80% dos dados para treinamento e 20% para validação, e os resultados indicam os desempenhos para o _Target class_ como a categoria "Lived", ou sobreviventes.
+Inicialmente, levando em conta a métrica _AUC_ (_Area Under Curve), ou seja, a área sob a curva ROC, como principal método de comparação vemos que a ordem decrescente de desempenho é _Logistic Regression_ > _Random Forest_ > KNN > SVM. Podemos visualizar este resultado também através das curvas ROC conforme a figura 1.
+	
 </div>	
 	
 **Figura 1** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
@@ -181,8 +183,8 @@ Agora validamos os classificadores treinados a partir do cenário 1 com os pacie
 
 <div align="center">
 
-Modelo|AUC|CA|F1|Precision|Recall
----|---|---|---|---|---
+Modelo|AUC|CA|F1|Precision|Recall|Specificity
+---|---|---|---|---|---|---
 KNN|0.989|0.980|0.971|0.961|0.980
 SVM|0.998|0.980|0.971|0.961|0.980
 Random Forest|1|0.980|0.971|0.961|0.980
