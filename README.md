@@ -159,7 +159,7 @@ A __Tabela 1__ é o resultado do treinamento dos respectivos modelos no cenário
 - _Recall_: Proporção entre o número de pacientes corretamente classificados como "Lived" e os pacientes que realmente sobreviveram.
 - _Specificity_: Proporção entre pessoas que foram corretamente classificadas como não-sobreviventes (categorias 1,2,3 e 4) e o total de pessoas que realmente não sobreviveram.
 
-Inicialmente, observando somente as métricas _CA_, _F1_, _Precision_ e _Recall_, poderiamos concluir prematuramente que os modelos obteveram um bom resultado devido aos altos valores obtidos. Entretanto, precisamos levar em consideração a qualidade dos dados de treinamento. O cenário 1 consiste em 87 pacientes dos quais 81 sobreviveram, portanto mesmo um modelo que classificasse todos pacientes que recebesse como sobreviventes possuiria as métricas _Recall_=_Precision_=_F1_= 81/87 = 0.931, e teriamos até mesmo a acurácia igual a 81/87, já que é a proporção de exemplos classificados corretamente. Portanto, as medidas descritas não seriam uma boa medida de desempenho para o problema em questão. Olhamos agora para a informação contida na medida _Specificity_.
+Inicialmente, observando somente as métricas _CA_, _F1_, _Precision_ e _Recall_, poderiamos concluir prematuramente que os modelos obteveram um bom resultado devido aos altos valores obtidos. Entretanto, precisamos levar em consideração a qualidade dos dados de treinamento. O cenário 1 consiste em 87 pacientes dos quais 81 sobreviveram, portanto mesmo um modelo que classificasse todos pacientes que recebesse como sobreviventes possuiria as métricas _Recall_= 1, _Precision_= 81/87 = 0.931, _F1_= 0.964 e _CA_ = 81/87, já que é a proporção de exemplos classificados corretamente. Portanto, as medidas descritas não seriam uma boa medida de desempenho para o problema em questão. Olhamos agora para a informação contida na medida _Specificity_.
 Como o cenário 1 está desbalanceado e possui uma grande proporção de pacientes de um único grupo, podemos supor que os modelos estarão enviesados a classificar os pacientes como "Lived". Apesar das demais medidas de comparação estarem comprometidas devido a este desbalanceamento, a _Specificity_ é uma medida leva em consideração os pacientes que foram classificados corretamente como não-sobreviventes, punindo modelos que erroneamente classificam os pacientes como sobreviventes. Portanto, olhamos para a especificidade para comparar os modelos e obtemos a seguinte ordem decrescente de desempenho: _Logistic Regression_ > _KNN_ = _Random Forest_ = _SVM_, onde o _KNN_,_SVM_ e _Random Forest_ não classificaram nenhum não-sobrevivente corretamente.
 
 A segunda métrica que podemos utilizar é a _AUC_, ou a área sob a curva ROC, uma vez que seu valor também depende da _Specificity_ e favorece modelos menos enviesados pela má qualidade dos dados. Neste caso, a partir da __Tabela 1__ obtemos a seguinte ordem decrescente de desempenho: _Logistic Regression_ > _KNN_ > _Random Forest_ > _SVM_. Podemos visualizar este resultado também através das curvas ROC conforme a __Figura 1__, onde vemos que a curva da _Logistic Regression_ (rosa) domina as demais, seguida pela _KNN_ (verde), _Random Forest_ (laranja) e finalmente _SVM_ (azul) com o pior desempenho.
@@ -207,33 +207,39 @@ A princípio, utilizando AUC como métrica principal de comparação vemos que o
 
 <div align="center">
 
-Modelo|AUC|CA|F1|Precision|Recall
----|---|---|---|---|---
-KNN|0.485|0.980|0.971|0.961|0.980
-SVM|0.328|0.980|0.971|0.961|0.980
-Random Forest|0.568|0.980|0.971|0.961|0.980
-Logistic Regression|0.480|0.971|0.966|0.961|0.971
+Modelo|AUC|CA|F1|Precision|Recall|Specificity
+---|---|---|---|---|---|---
+KNN|0.490|0.980|0.990|0.980|1.000|0.000
+SVM|0.300|0.980|0.990|0.980|1.000|0.000
+Random Forest|0.660|0.971|0.985|0.980|0.990|0.000
+Logistic Regression|0.940|0.971|0.985|0.980|0.990|0.000
 
 </div>
-	
+
+Assim como no primeiro caso, antes de utilizarmos todas as métricas como medida de desempenho, observamos que para um modelo completamente enviesado que classificaria todos os pacientes como sobreviventes, teriamos _Recall_= 100/100 = 1, _Precision_= 100/102 = 0.980, _F1_= 0.990 e _CA_ = 100/102 = 0.980, indicando que os altos valores observados não são boas medidas comparativas. Logo, mais uma vez recorremos à _Specificity_. Contudo, nenhum dos modelos acertou a predição de um paciente que não sobreviveu, comprometendo também a métrica _Specificity_. Portanto, nenhuma métrica em questão reflete o desempenho dos modelos, fato causado em sua maioria pela desproporção de dados para um grupo (sobreviventes) em relação aos demais (1,2,3 e 4), já que apenas 2 dos 102 pacientes morreram.
+
+As curvas ROC para cada modelo são apresentadas na __Figura 2__.
+
 **Figura 2** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem2.png?raw=true">
 	</div>
+
+Interpretando os valores das respectivas áreas sob as curvas ROC como uma medida de desempenho, é feita a análise probabilística do melhor modelo conforme a __Tabela 5__.  
 
 **Tabela 5** - Comparação dos modelos por AUC.
 <div align="center">
 
 -|KNN|SVM|Random Forest|Logistic Regression
 -|-|-|-|-
-KNN||0.911|0.344|0.059
-SVM|0.089||0.243|0.017
-Random Forest|0.656|0.757||0.333
-Logistic Regression|0.941|0.983|0.667||
+KNN||0.911|0.341|0.059
+SVM|0.089||0.209|0.017
+Random Forest|0.659|0.791||0.227
+Logistic Regression|0.941|0.983|0.773||
 	
 </div>
 
-Observando a comparação dos modelos por AUC através da **Tabela 5** é tentador concluir que a _Logistic Regression_ é novamente superior aos demais modelos para este problema. Contudo, uma avaliação das predições de cada modelo vemos que todos os modelos classificaram os pacientes no grupo de sobreviventes, com exceção da _Logistic Regression_ que classificou um sobrevivente com o prognóstico de morte em 3 semanas. Está claro que a pouca quantidade de dados e o desbalanceamento dos mesmos (apenas 2 pacientes morreram), enviesaram os modelos a classificarem qualquer exemplo como "_Lived_", os tornando precisos mas pouco específicos neste cenário.
+Observando a comparação dos modelos por AUC através da **Tabela 5** é tentador concluir que a _Logistic Regression_ é novamente superior aos demais modelos para este problema. Contudo, uma avaliação das predições de cada modelo vemos que o modelo _KNN_ e _SVM_ classificaram todos os pacientes no grupo de sobreviventes, enquanto que a _Logistic Regression_ e _Random Forest_ erroneamente classificaram um sobrevivente no grupo de morte na 3ª semana, e os demais como sobreviventes. Está claro que a pouca quantidade de dados e o desbalanceamento dos mesmos (apenas 2 pacientes morreram), enviesaram os modelos a classificarem qualquer exemplo como "_Lived_", os tornando precisos mas pouco específicos neste cenário.
 
 ### Treinamento no cenário 4 e validação nos cenários 1,2 e 3
 **Tabela 6** - Resultado das avaliações dos modelos treinados no cenário 4.
