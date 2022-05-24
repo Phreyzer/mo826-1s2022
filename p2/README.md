@@ -166,7 +166,7 @@ A segunda métrica que podemos utilizar é a _AUC_, ou a área sob a curva ROC, 
 	
 **Figura 1** - Curvas ROC (Rosa->_Logistic Regression_; Verde->_KNN_; Laranja->_Random Forest_; Azul->_SVM_).
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem1.png?raw=true" >
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem1.png?raw=true" width="400" height="400">
 </div>
 
 Através da **Tabela 2** também podemos interpretar os valores _AUC_ de forma probabilística. Em cada entrada da tabela temos a probabilidade de que o _score_ do modelo na linha seja superior ao modelo na coluna, por exemplo, P(KNN > SVM) = 0.570. Assumindo as probabilidades como representativas do cenário real temos que a ordem decrescente de desempenho mais provável é:
@@ -222,7 +222,7 @@ As curvas ROC para cada modelo são apresentadas na __Figura 2__.
 
 **Figura 2** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem2.png?raw=true">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem2.png?raw=true" width="400" height="400">
 	</div>
 
 Interpretando os valores das respectivas áreas sob as curvas ROC como uma medida de desempenho, é feita a análise probabilística do melhor modelo conforme a __Tabela 5__.  
@@ -276,7 +276,7 @@ Logistic Regression|0.964|0.972|0.986|0.975|0.997|0.167
 
 **Figura 3** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem3.png?raw=true">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem3.png?raw=true" width="400" height="400">
 </div>
 
 **Tabela 8** - Comparação dos modelos por AUC.
