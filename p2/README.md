@@ -91,7 +91,7 @@ f2e5bd39-dc31-0471-1028-adee47891760|1976-05-17|NaN|white|	nonhispanic|	F|	11/26
 </div>
 
 
-O código responsável pela extração dos dados foi elaborado em Python em um Jupyter Notebook que pode ser visualizado no arquivo "filtering_code.ipynb" no link https://github.com/Phreyzer/mo826-1s2022/tree/main/notebooks.
+O código responsável pela extração dos dados foi elaborado em Python em um Jupyter Notebook que pode ser visualizado no arquivo "filtering_code.ipynb" no link https://github.com/Phreyzer/mo826-1s2022/tree/main/p2/notebooks.
 
 Uma vez obtidos os arquivos .csv com os dados filtrados, utilizamos o software Orange para realizar os seguintes modelos de classificações:
 
@@ -130,9 +130,9 @@ scenario04 | 117.532 | 10.168 |
 
 </div>
 
-Os dados originais referentes aos arquivos "patients.csv", "condition.csv" e "immunizations.csv" dos cenários 1 e 2 podem ser acessados no link https://github.com/Phreyzer/mo826-1s2022/tree/main/data/raw. Os dados dos cenários 3 e 4, por serem grandes demais no armezanamento do GitHub não foram disponibilizados.
+Os dados originais referentes aos arquivos "patients.csv", "condition.csv" e "immunizations.csv" dos cenários 1 e 2 podem ser acessados no link https://github.com/Phreyzer/mo826-1s2022/tree/main/p2/data/raw. Os dados dos cenários 3 e 4, por serem grandes demais no armezanamento do GitHub não foram disponibilizados.
 
-Os dados filtrados e os workflows do Orange para treinamento, validação e teste dos modelos estão disponíveis no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/src
+Os dados filtrados e os workflows do Orange para treinamento, validação e teste dos modelos estão disponíveis no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/p2/src
 
 # Resultados e Discussão
 ### Treinamento/validação no cenário 1 e Teste no cenário 2 
@@ -166,7 +166,7 @@ A segunda métrica que podemos utilizar é a _AUC_, ou a área sob a curva ROC, 
 	
 **Figura 1** - Curvas ROC (Rosa->_Logistic Regression_; Verde->_KNN_; Laranja->_Random Forest_; Azul->_SVM_).
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem1.png?raw=true" >
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem1.png?raw=true" >
 </div>
 
 Através da **Tabela 2** também podemos interpretar os valores _AUC_ de forma probabilística. Em cada entrada da tabela temos a probabilidade de que o _score_ do modelo na linha seja superior ao modelo na coluna, por exemplo, P(KNN > SVM) = 0.570. Assumindo as probabilidades como representativas do cenário real temos que a ordem decrescente de desempenho mais provável é:
@@ -222,7 +222,7 @@ As curvas ROC para cada modelo são apresentadas na __Figura 2__.
 
 **Figura 2** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem2.png?raw=true">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem2.png?raw=true">
 	</div>
 
 Interpretando os valores das respectivas áreas sob as curvas ROC como uma medida de desempenho, é feita a análise probabilística do melhor modelo conforme a __Tabela 5__.  
@@ -276,7 +276,7 @@ Logistic Regression|0.964|0.972|0.986|0.975|0.997|0.167
 
 **Figura 3** - Curvas ROC (Rosa->Regressão logística; Verde->KNN; Laranja->Random Forest; Azul->SVM).
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem3.png?raw=true">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p2/assets/Imagem3.png?raw=true">
 </div>
 
 **Tabela 8** - Comparação dos modelos por AUC.
