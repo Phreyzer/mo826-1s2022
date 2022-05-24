@@ -310,7 +310,7 @@ Scenario|AUC|CA|F1|Precision|Recall|Specificity
 
 Como podemos observar, o modelo obteve um _score_ alto para todas as métricas exceto a _Specificity_. Apesar de possuir valor quase 3 vezes maior quando testado contra os cenários 1 e 2, é possível que devido ao baixo número de não-sobreviventes, 6 e 2 respectivamente, a especificidade tenha obtido esses valores em parte por sorte. Já o cenário 3 evidencia que para uma base de dados maior, o modelo é realmente pouco específico.
 
-Devido ao fato dos valores presentes em uma matriz de confusão serem os mesmos usados para calcular as métricas de desempenho como Recall, Specificity, etc, as matrizes foram omitidas da descrição para evitar redundância na apresentação dos resultados. As matrizes de confusão completas para cada classificador podem ser encontradas em https://github.com/Phreyzer/mo826-1s2022/tree/main/p2/assets.
+Devido ao fato dos valores presentes em uma matriz de confusão serem os mesmos usados para calcular as métricas de desempenho como _Recall_, _Specificity_, etc, as matrizes foram omitidas do relatório para evitar redundância na apresentação dos resultados. As imagens das matrizes de confusão completas para cada classificador utilizado neste projeto podem ser encontradas em https://github.com/Phreyzer/mo826-1s2022/tree/main/p2/assets.
 
 # Conclusão
 O presente projeto permitiu aos seus integrantes trabalhar com dados sintéticos, aplicando técnicas tratamento de dados e também modelos de aprendizado de máquina.
