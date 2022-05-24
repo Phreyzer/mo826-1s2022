@@ -241,11 +241,28 @@ Logistic Regression|0.941|0.983|0.773||
 
 Observando a comparação dos modelos por AUC através da **Tabela 5** é tentador concluir que a _Logistic Regression_ é novamente superior aos demais modelos para este problema. Contudo, uma avaliação das predições de cada modelo vemos que o modelo _KNN_ e _SVM_ classificaram todos os pacientes no grupo de sobreviventes, enquanto que a _Logistic Regression_ e _Random Forest_ erroneamente classificaram um sobrevivente no grupo de morte na 3ª semana, e os demais como sobreviventes. Está claro que a pouca quantidade de dados e o desbalanceamento dos mesmos (apenas 2 pacientes morreram), enviesaram os modelos a classificarem qualquer exemplo como "_Lived_", os tornando precisos mas pouco específicos neste cenário.
 
+Olhamos para o resultado do teste nos dados do cenário 1 apresentado na __Tabela 6__.
+
+**Tabela 6** - Resultado do Teste (treinamento/validação=cenário 2; Teste=cenário 1).
+
+<div align="center">
+
+Modelo|AUC|CA|F1|Precision|Recall|Specificity
+---|---|---|---|---|---|---
+KNN|0.600|0.931|0.898|0.867|0.931|0.069
+SVM|0.937|0.931|0.898|0.867|0.931|0.069
+Random Forest|0.710|0.931|0.898|0.867|0.931|0.069
+Logistic Regression|0.960|0.920|0.903|0.887|0.920|0.378
+
+</div>
+
+É esperado que o modelo treinado com os dados do cenário 2 possua a pior performance, uma vez que possuí o maior desbalanço entre a frequência de categorias (98% é da categoria "Lived") e o modelo não aprenderá a classificar os casos adequadamente. A __Tabela 6__ sumariza esse raciocínio ao evidenciar um desempenho inferior ao apresentado pela __Tabela 3__, quando o cenário de treino é 1 e o de teste o 2.
+
 ### Treinamento no cenário 4 e validação nos cenários 1, 2 e 3
 
 Finalmente, realizamos os mesmos procedimentos para o cenário 4, o qual possui cerca de 10000 pacientes. As métricas de desempenho, a curva ROC e a comparação probabilística pela _AUC_ se encontram na __Tabela 6__, __Figura 3__ e __Tabela 7__ respectivamente. 
 
-**Tabela 6** - Resultado das avaliações dos modelos treinados no cenário 4.
+**Tabela 7** - Resultado das avaliações dos modelos treinados no cenário 4.
 <div align="center">
 	
 Modelo|AUC|CA|F1|Precision|Recall|Specificity
@@ -262,7 +279,7 @@ Logistic Regression|0.964|0.972|0.986|0.975|0.997|0.167
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/assets/Imagem3.png?raw=true">
 </div>
 
-**Tabela 7** - Comparação dos modelos por AUC.
+**Tabela 8** - Comparação dos modelos por AUC.
 
 <div align="center">
 
@@ -276,6 +293,22 @@ Logistic Regression|0.990|0.995|0.995||
 </div>
 	
 Utilizando novamente o AUC como métrica de comparação, vemos que a ordem decrescente de desempenho é: _Logistic Regression_ > _Random Forest_ > KNN > SVM, compartilhando a tendência dos demais onde a _Logistic Regression_ obteve o melhor desempenho e _SVM_ o pior.
+
+Por apresentar o melhor desempenho consistentemente, fazemos o teste do modelo _Logistic Regression_, obtido no cenário 4, com os dados dos três primeiros. Os resultados estão sumarizados na __Tabela 9__.
+
+**Tabela 9** - Resultado do Teste (treinamento/validação=cenário 4; Teste=cenário 1, 2 e 3).
+
+<div align="center">
+
+Scenario|AUC|CA|F1|Precision|Recall|Specificity
+---|---|---|---|---|---|---
+1|0.934|0.954|0.943|0.932|0.954|0.534
+2|0.993|0.980|0.976|0.971|0.980|0.510
+3|0.954|0.968|0.957|0.949|0.968|0.184
+
+</div>
+
+Como podemos observar, o modelo obteve um _score_ alto para todas as métricas exceto a _Specificity_. Apesar de possuir valor quase 3 vezes maior quando testado contra os cenários 1 e 2, é possível que devido ao baixo número de não-sobreviventes, 6 e 2 respectivamente, a especificidade tenha obtido esses valores em parte por sorte. Já o cenário 3 evidencia que para uma base de dados maior, o modelo é realmente pouco específico.
 
 # Conclusão
 O presente projeto permitiu aos seus integrantes trabalhar com dados sintéticos, aplicando técnicas tratamento de dados e também modelos de aprendizado de máquina.
