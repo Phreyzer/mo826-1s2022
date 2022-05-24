@@ -50,7 +50,6 @@ _Descrição_: Matriz de confusão para o _SVM_ treinado no cenário 1 e testado
 - __Imagem 12__
 _Descrição_: Matriz de confusão para a _Logistic Regression_ treinado no cenário 1 e testado no cenário 2.
 
-# Cenário 2 =====================
 - __Imagem 13__
 _Descrição_: Matriz de confusão para o _KNN_ treinado no cenário 2 (validação cruzada).
 
@@ -82,7 +81,6 @@ _Descrição_: Matriz de confusão para o _SVM_ treinado no cenário 2 e testado
 - __Imagem 21__
 _Descrição_: Matriz de confusão para a _Logistic Regression_ treinado no cenário 2 e testado no cenário 1.
 
-# Cenário 4 =====================
 - __Imagem 22__
 _Descrição_: Matriz de confusão para o _KNN_ treinado no cenário 4 (validação cruzada).
 
