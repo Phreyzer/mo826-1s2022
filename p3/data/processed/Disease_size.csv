@@ -1,0 +1,516 @@
+;Gene;Size
+0;3-methylglutaconicaciduria;1
+1;Aarskog-Scott syndrome;1
+2;ABCD syndrome;1
+3;Abetalipoproteinemia;2
+4;Achondrogenesis-hypochondrogenesis, type II;1
+5;Achondrogenesis Ib;1
+6;Achondroplasia;1
+7;Achromatopsia;3
+8;Acquired long QT syndrome;1
+9;Acromegaly;2
+10;Adenocarcinoma;4
+11;Adenoma, periampullary;1
+12;Adenomas;3
+13;Adenosine deaminase deficiency;1
+14;Adrenocortical carcinoma;1
+15;Adult i phenotype;1
+16;Afibrinogenemia;2
+17;Alagille syndrome;1
+18;Albinism;3
+19;Alcohol dependence;1
+20;Alexander disease;2
+21;Allergic rhinitis;1
+22;Alternating hemiplegia of childhood;1
+23;Alzheimer disease;12
+24;Amyloid neuropathy;1
+25;Amyloidosis;6
+26;Amyotrophic lateral sclerosis;6
+27;Androgen insensitivity;1
+28;Anemia;9
+29;Angelman syndrome;2
+30;Angiofibroma, sporadic;1
+31;Angiotensin I-converting enzyme;1
+32;Aniridia, type II;1
+33;Anorexia nervosa;1
+34;Anterior segment anomalies and cataract;4
+35;Anxiety-related personality traits;1
+36;Aortic aneurysm;1
+37;Apert syndrome;1
+38;Apolipoprotein deficiency;4
+39;Apparent mineralocorticoid excess, hypertension due to;1
+40;Aquaporin-1 deficiency;1
+41;Arrhythmogenic right ventricular dysplasia;3
+42;Arthropathy;1
+43;Asperger syndrome;2
+44;Asthma;13
+45;Ataxia;5
+46;Ataxia-telangiectasia;2
+47;Atelosteogenesis;2
+48;Atherosclerosis;1
+49;Atopy;5
+50;Atrial fibrillation;5
+51;Atrioventricular block;3
+52;Autism;4
+53;Autoimmune disease;4
+54;Axenfeld anomaly;1
+55;Bannayan-Riley-Ruvalcaba syndrome;1
+56;Bare lymphocyte syndrome;5
+57;Barth syndrome;1
+58;Bart-Pumphrey syndrome;1
+59;Basal cell carcinoma;4
+60;Beare-Stevenson cutis gyrata syndrome;1
+61;Becker muscular dystrophy;2
+62;Benzene toxicity;1
+63;Beta-2-adrenoreceptor agonist, reduced response to;1
+64;Birt-Hogg-Dube syndrome;1
+65;Bladder cancer;4
+66;Blood group;23
+67;Bone mineral density variability;1
+68;Bothnia retinal dystrophy;1
+69;Branchiootic syndrome;1
+70;Breast cancer;19
+71;Brugada syndrome;1
+72;Butterfly dystrophy, retinal;1
+73;Complementary component deficiency;13
+74;Cafe-au-lait spots;2
+75;Caffey disease;1
+76;Cancer susceptibility;2
+77;Capillary malformations;1
+78;Carcinoid tumors, intestinal;1
+79;Cardiomyopathy;25
+80;Carney complex;2
+81;Carpal tunnel syndrome, familial;1
+82;Cataract;15
+83;Central hypoventilation syndrome;5
+84;Cerebellar ataxia;2
+85;Cerebral amyloid angiopathy;2
+86;Cervical carcinoma;1
+87;Charcot-Marie-Tooth disease;18
+88;Cleft palate;3
+89;Coats disease;1
+90;Coffin-Lowry syndrome;1
+91;Coloboma, ocular;2
+92;Colon cancer;34
+93;Colonic aganglionosis, total, with small bowel involvement;1
+94;Cone dystrophy;7
+95;Convulsions;1
+96;Corneal dystrophy;7
+97;Coronary artery disease;6
+98;Costello syndrome;1
+99;Coumarin resistance;1
+100;Cowden disease;2
+101;CPT deficiency, hepatic;2
+102;Cramps, potassium-aggravated;1
+103;Craniofacial anomalies, empty sella turcica, corneal endothelial changes;1
+104;Craniofacial-deafness-hand syndrome;1
+105;Craniofacial-skeletal-dermatologic dysplasia;1
+106;Craniosynostosis;2
+107;Creatine phosphokinase;1
+108;Creutzfeldt-Jakob disease;2
+109;Crouzon syndrome;2
+110;Cutis laxa;3
+111;Cyclic ichthyosis with epidermolytic hyperkeratosis;1
+112;Deafness;41
+113;Dejerine-Sottas disease;4
+114;Dementia;6
+115;Dentin dysplasia, type II;1
+116;Dentinogenesis imperfecta, Shields type;1
+117;Denys-Drash syndrome;1
+118;Dermatobrosarcoma protuberans;1
+119;Desmoid disease, hereditary;1
+120;Diabetes mellitus;27
+121;Diastrophic dysplasia;1
+122;Dilated cardiomyopathy with woolly hair and keratoderma;1
+123;Dissection of cervical arteries;1
+124;Dopamine beta-hydroxylase deciency;1
+125;Duchenne muscular dystrophy;1
+126;Dyserythropoietic anemia;1
+127;Dysfibrinogenemia;3
+128;Dystransthyretinemic hyperthyroxinemia;1
+129;EBD;1
+130;Ectodermal dysplasia;8
+131;Ectopia;2
+132;Ehlers-Danlos syndrome;9
+133;Elliptocytosis;4
+134;Emery-Dreifuss muscular dystrophy;2
+135;Emphysema;1
+136;Endometrial carcinoma;4
+137;Enhanced S-cone syndrome;1
+138;Enlarged vestibular aqueduct;1
+139;Epidermolysis bullosa;11
+140;Epidermolytic hyperkeratosis;3
+141;Epilepsy;17
+142;Epiphyseal dysplasia;6
+143;Episodic ataxia;2
+144;Epstein syndrome;1
+145;Erythrokeratoderma;3
+146;Esophageal cancer;4
+147;Estrogen resistance;1
+148;Exudative vitreoretinopathy;3
+149;Eye anomalies;1
+150;Factor x deficiency;8
+151;Fanconi anemia;11
+152;Fanconi-Bickel syndrome;1
+153;Favism;1
+154;Fechtner syndrome;1
+155;Foveal hypoplasia;1
+156;Foveomacular dystrophy, adult-onset, with choroidal neovascularization;1
+157;Frasier syndrome;1
+158;Fuchs endothelial corneal dystrophy;1
+159;Fundus albipunctatus;3
+160;G6PD deficiency;1
+161;Gardner syndrome;1
+162;Gastric cancer;10
+163;Gastrointestinal stromal tumor;2
+164;Germ cell tumor;2
+165;Gerstmann-Straussler disease;1
+166;Giant-cell fibroblastoma;1
+167;Glaucoma;4
+168;Glioblastoma;5
+169;Glomerulocystic kidney disease, hypoplastic;1
+170;Glutathione synthetase deciency;1
+171;Goiter;2
+172;GRACILE syndrome;1
+173;Graft-versus-host disease;1
+174;Graves disease;2
+175;Growth hormone;2
+176;HDL cholesterol level QTL;2
+177;Heart block;1
+178;Hemangioblastoma, cerebellar;1
+179;Hematopoiesis, cyclic;1
+180;Hemiplegic migraine, familial;1
+181;Hemolytic anemia;10
+182;Hemolytic-uremic syndrome;1
+183;Hemorrhagic diathesis;2
+184;Hemosiderosis, systemic, due to aceruloplasminemia;1
+185;Hepatic adenoma;8
+186;Hirschsprung disease;7
+187;Histiocytoma;1
+188;HIV;4
+189;Holoprosencephaly;5
+190;Homocystinuria;2
+191;Huntington disease;4
+192;Hypercholanemia;3
+193;Hypercholesterolemia;8
+194;Hypereosinophilic syndrome;1
+195;Hyperinsulinism;1
+196;Hyperkalemic periodic paralysis;1
+197;Hyperlipoproteinemia;2
+198;Hyperostosis, endosteal;1
+199;Hyperparathyroidism;3
+200;Hyperproinsulinemia;1
+201;Hyperprolinemia;2
+202;Hyperproreninemia;1
+203;Hypertension;12
+204;Hyperthroidism;1
+205;Hyperthyroidism;1
+206;Hypertriglyceridemia;4
+207;Hypoalphalipoproteinemia;1
+208;Hypobetalipoproteinemia;1
+209;Hypocalcemia;1
+210;Hypocalciuric hypercalcemia;1
+211;Hypoceruloplasminemia;1
+212;Hypochondroplasia;1
+213;Hypodontia;2
+214;Hypofibrinogenemia;1
+215;Hypoglycemia;1
+216;Hypokalemic periodic paralysis;3
+217;Hypothyroidism;7
+218;Hystrix-like ichthyosis with deafness;1
+219;Ichthyosiform erythroderma;3
+220;Ichthyosis;7
+221;IgE levels QTL;1
+222;Immunodysregulation, polyendocrinopathy, and enteropathy, X-linked;1
+223;Incontinentia pigmenti;1
+224;Infantile spasm syndrome;1
+225;Infundibular hypoplasia and hypopituitarism;1
+226;Insensitivity to pain;1
+227;Insomnia;2
+228;Insulin resistance;3
+229;Intervertebral disc disease;2
+230;Iridogoniodysgenesis;2
+231;Iris hypoplasia and glaucoma;1
+232;Jackson-Weiss syndrome;2
+233;Jensen syndrome;1
+234;Jervell and Lange-Nielsen syndrome;2
+235;Juvenile polyposis/hereditary hemorrhagic telangiectasia syndrome;1
+236;Kallmann syndrome;2
+237;Keratitis;1
+238;Keratitis-ichthyosis-deafness syndrome;1
+239;Keratoconus;1
+240;Keratoderma, palmoplantar, with deafness;1
+241;Keratosis palmoplantaria striata;4
+242;Kniest dysplasia;1
+243;Larson syndrome;1
+244;Laryngoonychocutaneous syndrome;1
+245;Leanness, inherited;1
+246;Leber congenital amaurosis;7
+247;Leigh syndrome;12
+248;Leopard syndrome;1
+249;Leprechaunism;1
+250;Leprosy;1
+251;Leukemia;37
+252;Lhermitte-Duclos syndrome;1
+253;Liddle syndrome;2
+254;Li Fraumeni syndrome;1
+255;Li-Fraumeni syndrome;2
+256;Lipodystrophy;5
+257;Lipoma;3
+258;Lissencephaly;4
+259;Listeria monocytogenes;1
+260;Loeys-Dietz syndrome;2
+261;Long QT syndrome;7
+262;Lower motor neuron disease, progressive, without sensory symptoms;1
+263;Lung cancer;4
+264;Lymphoma;10
+265;Lynch cancer family syndrome II;1
+266;Macrocytic anemia;1
+267;Macrothrombocytopenia;1
+268;Macular degeneration;5
+269;Maculopathy, bull's-eye;1
+270;Malaria;5
+271;Malignant hyperthermia susceptibility;2
+272;Maple syrup urine disease;4
+273;Marfan syndrome;2
+274;Marshall syndrome;1
+275;MASS syndrome;1
+276;Mast cell leukemia;1
+277;Mastocytosis with associated hematologic disorder;1
+278;May-Hegglin anomaly;1
+279;McCune-Albright syndrome;1
+280;Medulloblastoma;2
+281;Melanoma;5
+282;Memory impairment;1
+283;Meniere disease;1
+284;Meningioma;4
+285;Menkes disease;1
+286;Mental retardation;24
+287;Merkel cell carcinoma;1
+288;Mesangial sclerosis;1
+289;Mesothelioma;1
+290;Migraine;4
+291;Mitochondrial complex deciency;7
+292;Miyoshi myopathy;1
+293;MODY;6
+294;Mohr-Tranebjaerg syndrome;1
+295;Morning glory disc anomaly;1
+296;Muenke syndrome;1
+297;Muir-Torre syndrome;2
+298;Multiple endocrine neoplasia;2
+299;Muscular dystrophy;18
+300;Myasthenic syndrome;7
+301;Myelodysplastic syndrome;3
+302;Myelofibrosis, idiopathic;1
+303;Myelogenous leukemia;4
+304;Myeloperoxidase deficiency;1
+305;Myocardial infarction;10
+306;Myoclonic epilepsy;3
+307;Myoglobinuria/hemolysis due to PGK deciency;1
+308;Myokymia with neonatal epilepsy;1
+309;Myopathy;10
+310;Myotilinopathy;1
+311;Myotonia congenita;2
+312;Myxoma, intracardiac;1
+313;Nasopharyngeal carcinoma;1
+314;Nephropathy-hypertension;1
+315;Netherton syndrome;1
+316;Neuroblastoma;2
+317;Neuroectodermal tumors;1
+318;Neurofibromatosis;3
+319;Neurobromatosis-Noonan syndrome;1
+320;Neurofibrosarcoma;1
+321;Neuropathy;8
+322;Neutropenia;4
+323;Nevo syndrome;1
+324;Nevus, epidermal, epidermolytic hyperkeratotic type;1
+325;Newfoundland rod-cone dystrophy;1
+326;Nicotine addiction;3
+327;Night blindness;5
+328;Nijmegen breakage syndrome;1
+329;Noncompaction of left ventricular myocardium;1
+330;Non-Hodgkin lymphoma;1
+331;Nonsmall cell lung cancer;3
+332;Noonan syndrome;1
+333;Norrie disease;1
+334;Obesity;21
+335;Obsessive-compulsive disorder;3
+336;Occipital horn syndrome;1
+337;Oculodentodigital dysplasia;1
+338;Oligodendroglioma;1
+339;Oligodontia;1
+340;Oligodontia-colorectal cancer syndrome;1
+341;Omenn syndrome;3
+342;Optic atrophy;2
+343;Orolaryngeal cancer;1
+344;OSMED syndrome;1
+345;Osseous heteroplasia;1
+346;Ossication of the posterior longitudinal spinal ligaments;1
+347;Osteoarthritis;4
+348;Osteogenesis imperfecta;2
+349;Osteopetrosis;4
+350;Osteoporosis;6
+351;Osteoporosis-pseudoglioma syndrome;1
+352;Osteosarcoma;2
+353;Ovarian cancer;8
+354;Pallidopontonigral degeneration;1
+355;Pancreatic cancer;9
+356;Papillary serous carcinoma of the peritoneum;1
+357;Paragangliomas;3
+358;Paramyotonia congenita;1
+359;Parathyroid adenoma;2
+360;Parietal foramina;2
+361;Parkes Weber syndrome;1
+362;Parkinson disease;11
+363;Partington syndrome;1
+364;PCWH;1
+365;Pelizaeus-Merzbacher disease;1
+366;Pendred syndrome;1
+367;Perineal hypospadias;1
+368;Peters anomaly;2
+369;Peutz-Jeghers syndrome;1
+370;Pfeiffer syndrome;2
+371;Pheochromocytoma;3
+372;Pick disease;1
+373;Piebaldism;1
+374;Pigmented paravenous chorioretinal atrophy;1
+375;Pilomatricoma;1
+376;Pituitary ACTH-secreting adenoma;3
+377;Placental abruption;1
+378;Platelet defect/deficiency;4
+379;Pneumothorax, primary spontaneous;1
+380;Polycythemia;2
+381;Polyposis;2
+382;PPM-X syndrome;1
+383;Preeclampsia;3
+384;Primary lateral sclerosis;1
+385;Prion disease with protracted course;1
+386;Prolactinoma, hyperparathyroidism, carcinoid syndrome;1
+387;Prostate cancer;12
+388;Proud syndrome;1
+389;Pseudoachondroplasia;1
+390;Pseudohypoaldosteronism;6
+391;Pseudohypoparathyroidism;1
+392;Pyropoikilocytosis;1
+393;Pyruvate dehydrogenase deciency;3
+394;Rabson-Mendenhall syndrome;1
+395;Renal cell carcinoma;7
+396;Retinal cone dsytrophy;4
+397;Retinitis pigmentosa;30
+398;Retinoblastoma;1
+399;Rett syndrome;2
+400;Rhabdomyosarcoma;4
+401;Rheumatoid arthritis;8
+402;Rh-mod syndrome;1
+403;Rh-negative blood type;2
+404;Rieger syndrome;2
+405;Ring dermoid of cornea;1
+406;Rippling muscle disease;1
+407;Roussy-Levy syndrome;2
+408;Rubenstein-Taybi syndrome;2
+409;Saethre-Chotzen syndrome;2
+410;Salivary adenoma;1
+411;Sandho disease, infantile, juvenile, and adult forms;1
+412;SARS, progression of;1
+413;Schizophrenia;9
+414;Schwannomatosis;1
+415;Sea-blue histiocyte disease;1
+416;Seasonal affective disorder;1
+417;Sebastian syndrome;1
+418;Self-healing collodion baby;1
+419;Sepsis;2
+420;Severe combined immunodeciency;8
+421;Sezary syndrome;1
+422;Shah-Waardenburg syndrome;1
+423;Shprintzen-Goldberg syndrome;1
+424;Sick sinus syndrome;1
+425;Silver spastic paraplegia syndrome;1
+426;Simpson-Golabi-Behmel syndrome;1
+427;Skin fragility-woolly hair syndrome;1
+428;SMED Strudwick type;1
+429;Solitary median maxillary central incisor;1
+430;Somatotrophinoma;1
+431;Spastic ataxia/paraplegia;9
+432;Spherocytosis;5
+433;Spinal muscular atrophy;7
+434;Spinocereballar ataxia;13
+435;Spondylocarpotarsal synostosis syndrome;1
+436;Spondyloepiphyseal dysplasia;5
+437;Squamous cell carcinoma;3
+438;Stargardt disease;2
+439;Stickler syndrome;3
+440;Stomach cancer;1
+441;Stroke;2
+442;Subcortical laminar heterotopia;2
+443;Supranuclear palsy;1
+444;Supravalvar aortic stenosis;1
+445;Syndactyly;1
+446;Systemic lupus erythematosus;4
+447;Tangier disease;1
+448;Tauopathy and respiratory failure;1
+449;T-cell lymphoblastic leukemia;2
+450;Tetralogy of Fallot;3
+451;Thanatophoric dysplasia, types I and II;1
+452;Thrombocythemia;2
+453;Thrombocytopenia;4
+454;Thrombophilia;9
+455;Thyroid carcinoma;11
+456;Thyrotoxic periodic paralysis;1
+457;Tietz syndrome;1
+458;Toenail dystrophy, isolated;1
+459;Transient bullous of the newborn;1
+460;Trismus-pseudocomptodactyly syndrome;1
+461;Turcot syndrome;3
+462;Unna-Thost disease, nonepidermolytic;1
+463;Urolithiasise;2
+464;Usher syndrome;8
+465;Uterine leiomyoma;1
+466;van Buchem disease;1
+467;VATER association with hydrocephalus;1
+468;Ventricular tachycardia;3
+469;Vertical talus;1
+470;Viral infection;2
+471;Vitelliform macular dystrophy;1
+472;Vohwinkel syndrome;2
+473;von Hippel-Lindau syndrome;2
+474;Waardenburg-Shah syndrome;2
+475;Waardenburg syndrome;4
+476;Wagner syndrome;1
+477;WAGR syndrome;1
+478;Walker-Warburg syndrome;3
+479;Watson syndrome;1
+480;Wegener granulomatosis;1
+481;Weill-Marchesani syndrome;2
+482;Weissenbacher-Zweymuller syndrome;1
+483;Williams-Beuren syndrome;1
+484;Wilms tumor;4
+485;Wiskott-Aldrich syndrome;1
+486;Witkop syndrome;1
+487;Wolff-Parkinson-White syndrome;1
+488;Yemenite deaf-blind hypopigmentation syndrome;1
+489;Zlotogora-Ogur syndrome;1
+490;Adrenal adenoma;1
+491;Adrenal cortical carcinoma;1
+492;Aneurysm, familial arterial;1
+493;Autoimmune thyroid disease;1
+494;Basal cell nevus syndrome;1
+495;Carcinoid tumor of lung;1
+496;Central core disease;2
+497;Coronary spasms;1
+498;Creatine deciency syndrome, X-linked;1
+499;Hypoplastic left heart syndrome;1
+500;Macular dystrophy;5
+501;Medullary thyroid carcinoma;2
+502;Pancreatic agenesis;1
+503;Persistent hyperinsulinemic hypoglycemia of infancy;1
+504;Pigmented adrenocortical disease, primary isolated;1
+505;Thyroid hormone resistance;2
+506;Total iodide organication defect;1
+507;Ventricular brillation, idiopathic;1
+508;Combined immunodeficiency;2
+509;Multiple malignancy syndrome;1
+510;Optic nerve hypoplasia/aplasia;1
+511;Placental steroid sulfatase deciency;1
+512;Renal tubular acidosis;5
+513;Multiple sclerosis;2
+514;Renal tubular dysgenesis;4
