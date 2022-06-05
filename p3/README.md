@@ -4,11 +4,16 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 
 ## Integrantes
 
+
+<div align="center">
+  
 Nome | RA | Especialização
 ---|---|---
 Caroline Gerbaudo Nakazato | 168913 | Ciência da Computação
 Luan de Oliveira Silveira | 204099 | Ciência da Computação
 Wilson Bagni Junior | 010097 | Ciência da Computação
+  
+</div>
 
 # Referência bibliográfica do artigo lido
 Goh, K.-I., Cusick, M. E., Valle, D., Childs, B., Vidal, M., & Barabási, A.-L. (2007). The human disease network. In Proceedings of the National Academy of Sciences (Vol. 104, Issue 21, pp. 8685–8690). Proceedings of the National Academy of Sciences. [Link](https://doi.org/10.1073/pnas.0701361104)
@@ -26,104 +31,214 @@ Dataset | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
 Diseasome | https://github.com/gephi/gephi/wiki/Datasets | Base de dados contendo pares de doenças associadas por genes em comum, assim como os genes associados a cada uma delas. Retirada originalmente da OMIM, dezembro de 2005.
 
+# Método
+> Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos. Etapas do processo reproduzido.
+
+
 # Resultados
 
 ## Doença-doença
-![[Image1.png]]
-Figura 1 - Grafo das doenças reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image1.png?raw=true">
+</div>
 
-![[Image2.png]]
-Figura 2 - Grafo das doenças do artigo.
+**Figura 1** - Grafo das doenças reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image2.png?raw=true">
+</div>
 
-A partir da Figura 1 vemos o formato do grafo obtido para a rede doença-doença. As cores para cada categoria de doença foram escolhidas a fim de coincidir com o grafo original (Figura 2) e auxiliar na comparação.
+**Figura 2** - Grafo das doenças do artigo.
+
+A partir da **Figura 1** vemos o formato do grafo obtido para a rede doença-doença. As cores para cada categoria de doença foram escolhidas a fim de coincidir com o grafo original (**Figura 2**) e auxiliar na comparação.
 
 Apesar do padrão de cores ser similar em algumas regiões dos grafos, os nós gerados pelo Cytoscape encontram-se levemente transladados e rotacionados ao grafo original. De fato, cada vez que os dados são carregados no software os nós gerados possuem posições absolutas diferentes, mas mantendo a posição relativa entre os mesmos similar. Para uma análise mais rigorosa é feita a comparação entre alguns grupos de doenças.
 
 ### Câncer
-![[Image3.png]]
-Figura 3 - Grupo Câncer reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image3.png?raw=true">
+</div>
 
-![[Image4.png]]
-Figura 4 - Grupo Câncer no artigo original.
+**Figura 3** - Grupo Câncer reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image4.png?raw=true">
+</div>
+
+**Figura 4** - Grupo Câncer no artigo original.
 
 ### Hematológico
-![[Image5.png]]
-Figura 5 - Grupo Hematológico reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image5.png?raw=true">
+</div>
 
-![[Image6.png]]
-Figura 6 - Grupo Hematológico no artigo original.
+**Figura 5** - Grupo Hematológico reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image6.png?raw=true">
+</div>
+
+**Figura 6** - Grupo Hematológico no artigo original.
 
 ### Oftomológico
-![[Image7.png]]
-Figura 7 - Grupo Oftomológico reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image7.png?raw=true">
+</div>
 
-![[Image8.png]]
-Figura 8 - Grupo Oftomológico no artigo original.
+**Figura 7** - Grupo Oftomológico reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image8.png?raw=true">
+</div>
+
+**Figura 8** - Grupo Oftomológico no artigo original.
 
 ### Ouvido, Nariz, Garganta
-![[Image9.png]]
-Figura 9 - Grupo Ouvido, Nariz, Garganta reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image9.png?raw=true">
+</div>
 
-![[Image10.png|400]]
-Figura 10 - Grupo Ouvido, Nariz, Garganta no artigo original.
+**Figura 9** - Grupo Ouvido, Nariz, Garganta reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image10.png?raw=true">
+</div>
+
+**Figura 10** - Grupo Ouvido, Nariz, Garganta no artigo original.
 
 ### Muscular
-![[Image11.png]]
-Figura 11 - Grupo Muscular reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image11.png?raw=true">
+</div>
 
-![[Image12.png]]
-Figura 12 - Grupo Muscular no artigo original.
+**Figura 11** - Grupo Muscular reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image12.png?raw=true">
+</div>
+
+**Figura 12** - Grupo Muscular no artigo original.
 
 ### Neurológico
-![[Image13.png]]
-Figura 13 - Grupo Neurológico reproduzido através do Cytoscape (parte 1).
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image13.png?raw=true">
+</div>
 
-![[Image14.png]]
-Figura 14 - Grupo Neurológico reproduzido através do Cytoscape (parte 2).
+**Figura 13** - Grupo Neurológico reproduzido através do Cytoscape (parte 1).
 
-![[Image15.png]]
-Figura 15 - Grupo Neurológico no artigo original.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image14.png?raw=true">
+</div>
+
+**Figura 14** - Grupo Neurológico reproduzido através do Cytoscape (parte 2).
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image15.png?raw=true">
+</div>
+
+**Figura 15** - Grupo Neurológico no artigo original.
 
 ## Gene-gene
-![[Image16.png]]
-Figura 16 - Grafo dos genes reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image16.png?raw=true">
+</div>
 
-![[Image17.png]]
-Figura 17 - Grafo dos genes do artigo original.
+**Figura 16** - Grafo dos genes reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image17.png?raw=true">
+</div>
+
+**Figura 17** - Grafo dos genes do artigo original.
 
 Assim como para o grafo doença-doença, realizamos a comparação entre alguns grupos.
 
 ### Câncer
-![[Image18.png]]
-Figura 18 - Grupo Câncer reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image18.png?raw=true">
+</div>
 
-![[Image19.png]]
-Figura 19 - Grupo Câncer no artigo original.
+**Figura 18** - Grupo Câncer reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image19.png?raw=true">
+</div>
+
+**Figura 19** - Grupo Câncer no artigo original.
 
 ### Hematológico
-![[Image20.png]]
-Figura 20 - Grupo Hematológico reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image20.png?raw=true">
+</div>
 
-![[Image21.png]]
-Figura 21 - Grupo Hematológico no artigo original.
+**Figura 20** - Grupo Hematológico reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image21.png?raw=true">
+</div>
+
+**Figura 21** - Grupo Hematológico no artigo original.
 
 ### Oftomológico
-![[Image22.png]]
-Figura 22 - Grupo Oftomológico reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image22.png?raw=true">
+</div>
 
-![[Image23.png]]
-Figura 23 - Grupo Oftomológico no artigo original.
+**Figura 22** - Grupo Oftomológico reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image23.png?raw=true">
+</div>
+
+**Figura 23** - Grupo Oftomológico no artigo original.
 
 ### Ouvido, Nariz, Garganta
-![[Image24.png]]
-Figura 24 - Grupo Ouvido, Nariz, Garganta reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image24.png?raw=true">
+</div>
 
-![[Image25.png|400]]
-Figura 25 - Grupo Ouvido, Nariz, Garganta no artigo original.
+**Figura 24** - Grupo Ouvido, Nariz, Garganta reproduzido através do Cytoscape.
+
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image25.png?raw=true">
+</div>
+
+**Figura 25** - Grupo Ouvido, Nariz, Garganta no artigo original.
 
 ### Muscular e Cardiovascular
-![[Image26.png]]
-Figura 26 - Grupo Muscular e Cardiovascular reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image26.png?raw=true">
+</div>
 
-![[Image27.png|400]]
-Figura 27 - Grupo Muscular e Cardiovascular no artigo original.
+**Figura 26** - Grupo Muscular e Cardiovascular reproduzido através do Cytoscape.
+<div align="center">
+  
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image27.png?raw=true">
+</div>
+
+**Figura 27** - Grupo Muscular e Cardiovascular no artigo original.
