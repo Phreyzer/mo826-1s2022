@@ -123,7 +123,7 @@ Figura 25 - Grupo Ouvido, Nariz, Garganta no artigo original.
 
 ### Muscular e Cardiovascular
 ![[Image26.png]]
-Figura 11 - Grupo Muscular reproduzido através do Cytoscape.
+Figura 26 - Grupo Muscular e Cardiovascular reproduzido através do Cytoscape.
 
 ![[Image27.png|400]]
-Figura 12 - Grupo Muscular no artigo original.
+Figura 27 - Grupo Muscular e Cardiovascular no artigo original.
