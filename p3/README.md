@@ -259,3 +259,5 @@ Assim como para o grafo doença-doença, realizamos a comparação entre alguns 
 </div>
 
 **Figura 27** - Grupo Muscular e Cardiovascular no artigo original.
+
+Como é possível observar, as redes obtidas pelo processamento de dados se assemelhou àquele obtido por Barabási et al. em seu Artigo.
