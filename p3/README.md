@@ -21,11 +21,15 @@ Goh, K.-I., Cusick, M. E., Valle, D., Childs, B., Vidal, M., & Barabási, A.-L. 
 # Resumo
 > Escreva um breve do artigo (com as suas palavras, não deve ser copiado texto do artigo).
 
+O artigo se propõe a estudar duas redes já conhecidas (1 - de Doenças e 2- de Genes relacionados à doenças) buscando encontrar novas relações que até então não haviam sido mapeadas. 
+
 # Breve descrição do experimento/análise do artigo que foi replicado
 A OMIM (_Online Mendelian Inheritance in Men_) é uma base de dados contendo genes e fenótipos humanos de forma gratuita e atualizada constantemente. Em sua divulgação inicial, Barabási et al. contavam com 517 doenças e suas categorias, e 903 genes. Atualmente, a OMIM conta com mais de 26,453 entradas.
 
-Em seu artigo, dentre outras coisas, Barabási et al. se propõem a criar um grafo no qual representa doenças como nódulos e as conectam através de arestas caso compartilhem um ou mais genes, sendo o tamanho do nó proporcional à quantidade de genes associados àquela condição e a espessura da linha proporcional à quantidade de genes compartilhados entre os nós. A ideia é expandida para a realização de um grafo gene-gene no qual cada nó é indicativo de um gene na base de dados, e cada aresta representa o compartilhamento de uma ou mais doenças associadas àquele gene. Neste caso o tamanho do nó é proporcional à quantidade de doenças associadas ao gene mas a largura da aresta não transmite significado.
+Em seu artigo, dentre outras coisas, Barabási et al. se propõem a criar um grafo no qual representa doenças como nós e as conectam através de arestas caso compartilhem um ou mais genes, sendo o tamanho do nó proporcional à quantidade de genes associados àquela condição e a espessura da linha proporcional à quantidade de genes compartilhados entre os nós. A ideia é expandida para a realização de um grafo gene-gene no qual cada nó é indicativo de um gene na base de dados, e cada aresta representa o compartilhamento de uma ou mais doenças associadas àquele gene. Neste caso o tamanho do nó é proporcional à quantidade de doenças associadas ao gene mas a largura da aresta não transmite significado.
 
+O presente trabalho teve por objetivo obter redes semelhantes às descritas na **Fig. 2a** e **Fig. 2b** do Artigo. Na seção de resultados deste projeto estas imagens aparecem reproduzidas nas **Figuras 2 e 17**.  É importante observar que para obter estas redes processamos os dados de forma similar ao indicado na **Fig 1** do Artigo.
+ 
 ## Dados usados como entrada
 Dataset | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
@@ -34,8 +38,21 @@ Diseasome | https://github.com/gephi/gephi/wiki/Datasets | Base de dados contend
 # Método
 > Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos. Etapas do processo reproduzido.
 
+A base de dados original(diseasome.gexf) encontrava-se no formato GEXF (Graph Exchange XML Format) e com o auxílio do software [Gephi](https://gephi.org/) foram extraídos dois arquivos de nós (nodes.csv) e arestas (edges.csv). Estes arquivos podem ser encontrados no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/p3/data/raw.
+
+A partir dos arquivos nodes.csv e edges.csv, utilizamos o Jupyter para escrever um código capaz de trabalhar com os dados originais e rescrevê-los de forma a conter as propriedades necessárias (quantidade de genes associados a uma condição e quantidade de genes compartilhados entre os nós) para escrever novos arquivos de nós e arestas que pudessem ser interpretados pelo [Cytoscape](https://cytoscape.org/).
+
+O arquivo do Jypter Notebook que processa os dados pode ser encontrado no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/p3/notebooks
+
+Os arquivos de nós e arestas processados estão no link:  https://github.com/Phreyzer/mo826-1s2022/tree/main/p3/data/processed
+
+Os arquivos das redes processadas no Cytoscape podem ser acessados no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/p3/src
+
 
 # Resultados
+
+Obtivemos redes similares à obtidas no Artigo. Abaixo reproduziremos imagens comparativas entre pedaços da rede como aparecem no artigo e os equivalentes que foram obtidos pelo nosso processamento dos dados através do Cytoscape. As imagens estão separadas em duas seções: 1- Doença-doença (**Fig.2a** do Artigo e **Figura 2** deste projeto) e 2- Gene-gene (**Fig.2b** do Artigo e **Figura 17** deste projeto)
+
 
 ## Doença-doença
 <div align="center">
