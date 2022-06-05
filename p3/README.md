@@ -21,7 +21,7 @@ Goh, K.-I., Cusick, M. E., Valle, D., Childs, B., Vidal, M., & Barabási, A.-L. 
 # Resumo
 > Escreva um breve do artigo (com as suas palavras, não deve ser copiado texto do artigo).
 
-O artigo se propõe a estudar duas redes já conhecidas (1 - de Doenças e 2- de Genes relacionados à doenças) buscando encontrar novas relações que até então não haviam sido mapeadas. 
+O artigo se propõe a estudar duas redes já conhecidas (1 - de Doenças relacionadas entre si e 2- de Genes relacionados à doenças) buscando encontrar novas relações que até então não haviam sido mapeadas. 
 
 # Breve descrição do experimento/análise do artigo que foi replicado
 A OMIM (_Online Mendelian Inheritance in Men_) é uma base de dados contendo genes e fenótipos humanos de forma gratuita e atualizada constantemente. Em sua divulgação inicial, Barabási et al. contavam com 517 doenças e suas categorias, e 903 genes. Atualmente, a OMIM conta com mais de 26,453 entradas.
