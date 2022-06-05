@@ -28,7 +28,7 @@ A OMIM (_Online Mendelian Inheritance in Men_) é uma base de dados contendo gen
 
 Em seu artigo, dentre outras coisas, Barabási et al. se propõem a criar um grafo no qual representa doenças como nós e as conectam através de arestas caso compartilhem um ou mais genes, sendo o tamanho do nó proporcional à quantidade de genes associados àquela condição e a espessura da linha proporcional à quantidade de genes compartilhados entre os nós. A ideia é expandida para a realização de um grafo gene-gene no qual cada nó é indicativo de um gene na base de dados, e cada aresta representa o compartilhamento de uma ou mais doenças associadas àquele gene. Neste caso o tamanho do nó é proporcional à quantidade de doenças associadas ao gene mas a largura da aresta não transmite significado.
 
-O presente trabalho teve por objetivo obter redes semelhantes às descritas na **Fig. 2a** e **Fig. 2b** do Artigo. Na seção de resultados deste projeto estas imagens aparecem reproduzidas nas **Figuras 2 e 17**.  É importante observar que para obter estas redes processamos os dados de forma similar ao indicado na **Fig 1** do Artigo.
+O presente trabalho teve por objetivo obter redes semelhantes às descritas na [**Fig. 2a**](https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image2.png?raw=true) e [**Fig. 2b**](https://github.com/Phreyzer/mo826-1s2022/blob/main/p3/assets/Image17.png?raw=true) do Artigo. Na seção de resultados deste projeto estas imagens aparecem reproduzidas nas **Figuras 2 e 17**.  
  
 ## Dados usados como entrada
 Dataset | Endereço na Web | Resumo descritivo
