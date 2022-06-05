@@ -29,7 +29,7 @@ Diseasome | https://github.com/gephi/gephi/wiki/Datasets | Base de dados contend
 # Resultados
 
 ## Doença-doença
-![[assets/Image1.png]]
+![[Image1.png]]
 Figura 1 - Grafo das doenças reproduzido através do Cytoscape.
 
 ![[Image2.png]]
