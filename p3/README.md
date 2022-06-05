@@ -25,3 +25,105 @@ Em seu artigo, dentre outras coisas, Barabási et al. se propõem a criar um gra
 Dataset | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
 Diseasome | https://github.com/gephi/gephi/wiki/Datasets | Base de dados contendo pares de doenças associadas por genes em comum, assim como os genes associados a cada uma delas. Retirada originalmente da OMIM, dezembro de 2005.
+
+# Resultados
+
+## Doença-doença
+![[Image1.png]]
+Figura 1 - Grafo das doenças reproduzido através do Cytoscape.
+
+![[Image2.png]]
+Figura 2 - Grafo das doenças do artigo.
+
+A partir da Figura 1 vemos o formato do grafo obtido para a rede doença-doença. As cores para cada categoria de doença foram escolhidas a fim de coincidir com o grafo original (Figura 2) e auxiliar na comparação.
+
+Apesar do padrão de cores ser similar em algumas regiões dos grafos, os nós gerados pelo Cytoscape encontram-se levemente transladados e rotacionados ao grafo original. De fato, cada vez que os dados são carregados no software os nós gerados possuem posições absolutas diferentes, mas mantendo a posição relativa entre os mesmos similar. Para uma análise mais rigorosa é feita a comparação entre alguns grupos de doenças.
+
+### Câncer
+![[Image3.png]]
+Figura 3 - Grupo Câncer reproduzido através do Cytoscape.
+
+![[Image4.png]]
+Figura 4 - Grupo Câncer no artigo original.
+
+### Hematológico
+![[Image5.png]]
+Figura 5 - Grupo Hematológico reproduzido através do Cytoscape.
+
+![[Image6.png]]
+Figura 6 - Grupo Hematológico no artigo original.
+
+### Oftomológico
+![[Image7.png]]
+Figura 7 - Grupo Oftomológico reproduzido através do Cytoscape.
+
+![[Image8.png]]
+Figura 8 - Grupo Oftomológico no artigo original.
+
+### Ouvido, Nariz, Garganta
+![[Image9.png]]
+Figura 9 - Grupo Ouvido, Nariz, Garganta reproduzido através do Cytoscape.
+
+![[Image10.png|400]]
+Figura 10 - Grupo Ouvido, Nariz, Garganta no artigo original.
+
+### Muscular
+![[Image11.png]]
+Figura 11 - Grupo Muscular reproduzido através do Cytoscape.
+
+![[Image12.png]]
+Figura 12 - Grupo Muscular no artigo original.
+
+### Neurológico
+![[Image13.png]]
+Figura 13 - Grupo Neurológico reproduzido através do Cytoscape (parte 1).
+
+![[Image14.png]]
+Figura 14 - Grupo Neurológico reproduzido através do Cytoscape (parte 2).
+
+![[Image15.png]]
+Figura 15 - Grupo Neurológico no artigo original.
+
+## Gene-gene
+![[Image16.png]]
+Figura 16 - Grafo dos genes reproduzido através do Cytoscape.
+
+![[Image17.png]]
+Figura 17 - Grafo dos genes do artigo original.
+
+Assim como para o grafo doença-doença, realizamos a comparação entre alguns grupos.
+
+### Câncer
+![[Image18.png]]
+Figura 18 - Grupo Câncer reproduzido através do Cytoscape.
+
+![[Image19.png]]
+Figura 19 - Grupo Câncer no artigo original.
+
+### Hematológico
+![[Image20.png]]
+Figura 20 - Grupo Hematológico reproduzido através do Cytoscape.
+
+![[Image21.png]]
+Figura 21 - Grupo Hematológico no artigo original.
+
+### Oftomológico
+![[Image22.png]]
+Figura 22 - Grupo Oftomológico reproduzido através do Cytoscape.
+
+![[Image23.png]]
+Figura 23 - Grupo Oftomológico no artigo original.
+
+### Ouvido, Nariz, Garganta
+![[Image24.png]]
+Figura 24 - Grupo Ouvido, Nariz, Garganta reproduzido através do Cytoscape.
+
+![[Image25.png|400]]
+Figura 25 - Grupo Ouvido, Nariz, Garganta no artigo original.
+
+### Muscular e Cardiovascular
+![[Image26.png]]
+Figura 11 - Grupo Muscular reproduzido através do Cytoscape.
+
+![[Image27.png|400]]
+Figura 12 - Grupo Muscular no artigo original.
