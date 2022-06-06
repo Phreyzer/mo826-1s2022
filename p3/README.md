@@ -42,7 +42,12 @@ Diseasome | https://github.com/gephi/gephi/wiki/Datasets | Base de dados contend
 
 A base de dados original(diseasome.gexf) encontrava-se no formato GEXF (Graph Exchange XML Format) e com o auxílio do software [Gephi](https://gephi.org/) foram extraídos dois arquivos de nós (nodes.csv) e arestas (edges.csv). Estes arquivos podem ser encontrados no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/p3/data/raw.
 
-A partir dos arquivos nodes.csv e edges.csv, utilizamos o Jupyter para escrever um código capaz de trabalhar com os dados originais e rescrevê-los de forma a conter as propriedades necessárias (quantidade de genes associados a uma condição e quantidade de genes compartilhados entre os nós) para escrever novos arquivos de nós e arestas que pudessem ser interpretados pelo [Cytoscape](https://cytoscape.org/).
+A partir dos arquivos nodes.csv e edges.csv, utilizamos o Jupyter para escrever um código capaz de trabalhar com os dados originais e rescrevê-los de forma a conter as propriedades necessárias. O código gerou 3 arquivos finais para cada rede:
+- Disease_edges.csv/Genes_edges.csv -> Arquivo com uma coluna representando o nó fonte e outra representando o nó objetivo;
+- Disease_nodes.csv/Genes_nodes.csv -> Arquivo contendo a categoria que cada doença/gene está associado
+- Disease_size.csv/Genes_nodes.csv -> Arquivo contendo o tamanho de cada nó 
+
+(quantidade de genes associados a uma condição e quantidade de genes compartilhados entre os nós) para escrever novos arquivos de nós e arestas que pudessem ser interpretados pelo [Cytoscape](https://cytoscape.org/).
 
 O arquivo do Jypter Notebook que processa os dados pode ser encontrado no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/p3/notebooks
 
