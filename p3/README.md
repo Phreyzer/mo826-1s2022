@@ -21,6 +21,8 @@ Goh, K.-I., Cusick, M. E., Valle, D., Childs, B., Vidal, M., & Barabási, A.-L. 
 # Resumo
 > Escreva um breve do artigo (com as suas palavras, não deve ser copiado texto do artigo).
 
+Uma rede contendo doenças ligadas por _links_ que representam associações genéticas pode oferecer um meio de estudo entre estas doenças e promover a descoberta de relações ainda não mapeadas
+
 O artigo se propõe a estudar duas redes já conhecidas (1 - de Doenças relacionadas entre si e 2- de Genes relacionados à doenças) buscando encontrar novas relações que até então não haviam sido mapeadas. 
 
 # Breve descrição do experimento/análise do artigo que foi replicado
@@ -48,10 +50,11 @@ Os arquivos de nós e arestas processados estão no link:  https://github.com/Ph
 
 Os arquivos das redes processadas no Cytoscape podem ser acessados no link: https://github.com/Phreyzer/mo826-1s2022/tree/main/p3/src
 
+Os arquivos em questão foram então abertos através do Cytoscape para as respectivas redes doenças-doenças e genes-genes. O arquivo Disease_edge.csv foi usado como base para a rede de doenças, selecionando-se as colunas apropriadas como _Source_ e _Target_ no _software_. Em seguida o arquivo Disease_nodes.csv foi utilizado para extrair a classe de cada doença como atributo dos nós, e finalmente o arquivo Disease_size também como atributo. A rede gerada foi então customizada para que o tamanho dos nós fosse proporcional a quantidade de genes associados a cada doença (atributo proveniente do arquivo Disease_size), e a cor dos nós foi determinada para cada grupo para que correspondessem com as cores originais do artigo, facilitando a comparação. Similarmente, o arquivo Genes_edges.csv foi utilizado como base para a rede de genes, o arquivo Genes_nodes.csv para atribuir as categorias de cada gene e o arquivo Genes_size.csv para determinar o tamanho dos nós.
 
 # Resultados
 
-Obtivemos redes similares à obtidas no Artigo. Abaixo reproduziremos imagens comparativas entre pedaços da rede como aparecem no artigo e os equivalentes que foram obtidos pelo nosso processamento dos dados através do Cytoscape. As imagens estão separadas em duas seções: 1- Doença-doença (**Fig.2a** do Artigo e **Figura 2** deste projeto) e 2- Gene-gene (**Fig.2b** do Artigo e **Figura 17** deste projeto)
+Obtivemos redes similares às obtidas no Artigo. Abaixo reproduziremos imagens comparativas entre pedaços da rede como aparecem no artigo e os equivalentes que foram obtidos pelo nosso processamento dos dados através do Cytoscape. As imagens estão separadas em duas seções: 1- Doença-doença (**Fig.2a** do Artigo e **Figura 2** deste projeto) e 2- Gene-gene (**Fig.2b** do Artigo e **Figura 17** deste projeto)
 
 
 ## Doença-doença
