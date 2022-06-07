@@ -20,7 +20,7 @@ Goh, K.-I., Cusick, M. E., Valle, D., Childs, B., Vidal, M., & Barabási, A.-L. 
 
 # Resumo
 
-O artigo se propõe a estudar duas redes já conhecidas (1 - de Doenças relacionadas entre si e 2- de Genes relacionados à doenças) buscando encontrar novas relações que até então não haviam sido mapeadas.
+Diversos estudos tem sido conduzidos a fim de mapear genes humanos e doenças associadas aos mesmos, como consequência, hoje temos disponível uma base de dados extensiva de pares doença-gene. Uma rede contendo doenças com ligações que representam associações genéticas pode oferecer um meio de estudo entre estas condições e promover a descoberta de relações ainda não mapeadas. Expandindo nesta ideia, Barabási et al. estuda a possibilidade de que a associação entre genes e doenças ocorra devido a um alto nível de organização celular, se baseando no exemplo de doenças como a síndrome de Zellweger, que é causada por mutações em qualquer um de 11 genes, todos associados à produção da mesma organela. 
 
 # Breve descrição do experimento/análise do artigo que foi replicado
 A OMIM (_Online Mendelian Inheritance in Men_) é uma base de dados contendo genes e fenótipos humanos de forma gratuita e atualizada constantemente. Em sua divulgação inicial, Barabási et al. contavam com 517 doenças e suas categorias, e 903 genes. Atualmente, a OMIM conta com mais de 26,453 entradas.
