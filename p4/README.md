@@ -26,7 +26,7 @@ The images were separated by patient and then in two groups (Train and Validatio
 
 The images with mask applied were preprocessed using [Min-max normalization] https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_(min-max_normalization) and the feature [kurtosis] (https://en.wikipedia.org/wiki/Kurtosis) was extracted of each them.
 
-Then using a [Support Vector Machine (sVM)] (https://en.wikipedia.org/wiki/Support-vector_machine) classifier, a model was trained to classify the images between ischemic (AVC) and demyelinating lesions(EM).
+Then using a [Support Vector Machine (SVM)] (https://en.wikipedia.org/wiki/Support-vector_machine) classifier, a model was trained to classify the images between ischemic (AVC) and demyelinating lesions(EM).
 
 The images from patients with Systemic Lupus Erythematosus (SLE) were processed in the same way and then the SVM classied then into SVM ou EM type.
 
