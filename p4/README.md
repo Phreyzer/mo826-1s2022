@@ -30,7 +30,21 @@ Then using a [Support Vector Machine (SVM)](https://en.wikipedia.org/wiki/Suppor
 
 The images from patients with Systemic Lupus Erythematosus (SLE) were processed in the same way and then the SVM classied then into SVM ou EM type.
 
+The code used to process the images and develop the SVM is avaliable in the site: XXXXXXXXXXXXXXX. 
 
+Note: Because the limitation of space in github, the images were not provide in this platform.
+
+
+## Visual Analysis 
+
+Before present the SVM's result, It is worth analysing the images and some features.
+
+xXXXXXX
+
+## Results
+
+
+## Conclusions
 
 
 
