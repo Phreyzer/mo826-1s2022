@@ -24,9 +24,9 @@ The objective of the project is, using a classifier trained to differentiate isc
 We are provided a folder with labeled medical images and a respective mask to extract the lesion. The mask select a Region of Interest (ROI) in the image.
 The images were separated by patient and then in two groups (Train and Validation). The images were splitted in a way that there wasn't images from the same patient in the two groups at same time.
 
-The images with mask applied were preprocessed using [Min-max normalization] https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_(min-max_normalization) and the feature [kurtosis] (https://en.wikipedia.org/wiki/Kurtosis) was extracted of each them.
+The images with mask applied were preprocessed using [Min-max normalization](https://en.wikipedia.org/wiki/Feature_scaling#Rescaling_(min-max_normalization)) and the feature [kurtosis](https://en.wikipedia.org/wiki/Kurtosis) was extracted of each them.
 
-Then using a [Support Vector Machine (SVM)] (https://en.wikipedia.org/wiki/Support-vector_machine) classifier, a model was trained to classify the images between ischemic (AVC) and demyelinating lesions(EM).
+Then using a [Support Vector Machine (SVM)](https://en.wikipedia.org/wiki/Support-vector_machine) classifier, a model was trained to classify the images between ischemic (AVC) and demyelinating lesions(EM).
 
 The images from patients with Systemic Lupus Erythematosus (SLE) were processed in the same way and then the SVM classied then into SVM ou EM type.
 
