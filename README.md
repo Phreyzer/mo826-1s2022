@@ -26,3 +26,7 @@ Wilson Bagni Junior | 010097 | Ciência da Computação
 <br>
 
 - [Projeto 3 - Reproduzindo o Experimento de um Artigo Científico](https://github.com/Phreyzer/mo826-1s2022/tree/main/p3)
+
+<br>
+
+- [Projeto 4 - Classificação de lesões de substância branca no Lúpus // Classification of white matter lesions in lupus](https://github.com/Phreyzer/mo826-1s2022/tree/main/p4)
