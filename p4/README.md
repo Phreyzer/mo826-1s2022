@@ -65,6 +65,14 @@ Homogeinity|72.31|58.97|82.03|4.05
 
 The kurtosis showed the best performance with a 91.31% mean accuracy score and never dropping below 80%. After also trying a combination of the top performers we arrive at the following result.
 
+<div align="center">
+Combination|Mean|Min|Max|Std
+-|-|-|-|-
+Skewness,Kurtosis,Entropy,Max,Mean,Std|91.15|80.21|99.66|4.46
+Skewness,Kurtosis,Entropy|90.84|74.62|98.98|4.67
+Skewness,Kurtosis|90.50|77.99|99.59|4.54
+</div>
+
 ## Results
 
 ## Conclusions
