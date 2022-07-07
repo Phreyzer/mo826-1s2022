@@ -83,7 +83,7 @@ The kurtosis of a distribution is commonly interpreted as being related to the s
 </div>
 
 
-The dataset was again ramdonly split into a 80-20 proportion of patients for training and test, the kurtosis was extracted from the image of the lesion (that is, we applyied the mask into the image to obtain only the lesion, and also throwed out the zero pixels with the idea that the model should only be exposed to information of the lesions themselves to be able to distinguish them) and normalized before being given to the classifier.
+The dataset was again ramdomly split into a 80-20 proportion of patients for training and test, the kurtosis was extracted from the image of the lesion (that is, we applyied the mask into the image to obtain only the lesion, and also throwed out the zero pixels with the idea that the model should only be exposed to information of the lesions themselves to be able to distinguish them) and normalized before being given to the classifier.
 
 The final svm had a accuracy score of 91.2% on the testing set, and will be used to classify lesion types from lupus into stroke or multiple sclerosis.
 
@@ -93,6 +93,9 @@ The first thing to notice is that each given patient has multiple images, and th
 
 The model used was training with the original 581 images from the 50 stroke patients and the 630 images from the 51 multiple sclerosis ones. No image normalization method was used since it proved inefficient in our previous study. However, the attributes were normalized using the z-score method so its values are closer distributed.
 
+<div align="center">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image02.jpg?raw=true" width="300" height="200">
+</div>
 
 
 ## Conclusions
