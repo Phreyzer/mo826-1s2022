@@ -14,6 +14,7 @@ Luan de Oliveira Silveira | 204099 | Computer Science
 Wilson Bagni Junior | 010097 | Computer Science
 </div>
 
+
 ## Introduction
 
 Brain lesions are a type of damage to the brain that may be caused, among other things, by three main conditions:
