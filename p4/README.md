@@ -6,14 +6,15 @@ This project was developed in the context of the activities of the graduate cour
 
 ## Members
 
-<div align="center">
-  
-Name | RA | Speciality
----|---|---
-Luan de Oliveira Silveira | 204099 | Computer Science
-Wilson Bagni Junior | 010097 | Computer Science
-</div>
 
+<div align="center">
+	
+	
+Nome | RA | Especialização
+----|--|-----
+Luan de Oliveira Silveira | 204099 | Ciência da Computação
+Wilson Bagni Junior | 010097 | Ciência da Computação
+</div>
 
 ## Introduction
 
