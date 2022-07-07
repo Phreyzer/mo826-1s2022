@@ -90,6 +90,10 @@ The final svm had a accuracy score of 91.2% on the testing set, and will be used
 
 The first thing to notice is that each given patient has multiple images, and the svm will attempt to classify each image separately, so it's possible that the model will diagnose the same patient with different lesion types depending on the given flair. This is not a problem since our focus here is to study the criteria that it uses to decide on a diagnosis, and looking at different flairs with different diagnosis of the same patient might give us an insight into what the model considers relevant in classifying.
 
+The model used was training with the original 581 images from the 50 stroke patients and the 630 images from the 51 multiple sclerosis ones. No image normalization method was used since it proved inefficient in our previous study. However, the attributes were normalized using the z-score method so its values are closer distributed.
+
+
+
 ## Conclusions
 
 
