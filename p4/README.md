@@ -12,7 +12,6 @@ Name | RA | Speciality
 ---|---|---
 Luan de Oliveira Silveira | 204099 | Computer Science
 Wilson Bagni Junior | 010097 | Computer Science
-  
 </div>
 
 ## Introduction
