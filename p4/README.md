@@ -44,6 +44,23 @@ Tanh|48.571429|94.901961|81.477037|11.744619
 As we can see the no normalization method had a better result since the mean accuracy is the best with 90.28% and it doesn't drop below 60% precision with a relatively low standard deviation. We decided to move foward with the no normalization.
 
 Our next step is to compare each feature to determine the best attributes to the model. We do this also running 100 models with a single different attribute and measuring the minimum, maximum, standard deviation and mean accuracy scores.
+
+Attribute|Mean|Min|Max|Std
+-|-|-|-|-
+Kurtosis|91.31|80.00|99.62|4.26
+Skewness|91.06|77.21|99.64|4.80
+Entropy|86.63|76.89|96.51|4.14
+Max|85.49|41.98|96.08|6.07
+Mean|85.27|35.22|95.30|6.78
+Std|85.00|37.86|95.88|8.18
+Correlation|83.90|76.81|90.53|2.94
+Contrast|79.61|67.98|88.69|4.80
+Dissimilarity|76.89|66.09|86.76|4.40
+ASM|75.15|51.97|85.42|4.80
+Energy|74.77|61.90|86.36|3.99
+Homogeinity|72.31|58.97|82.03|4.05
+
+
 ## Results
 
 ## Conclusions
