@@ -40,6 +40,10 @@ DS|44.758065|96.511628|83.148129|13.452082
 ZS|45.588235|94.809689|79.300250|13.104043
 Tanh|48.571429|94.901961|81.477037|11.744619
  </div> 
+ 
+As we can see the no normalization method had a better result since the mean accuracy is the best with 90.28% and it doesn't drop below 60% precision with a relatively low standard deviation. We decided to move foward with the no normalization.
+
+Our next step is to compare each feature to determine the best attributes to the model. We do this also running 100 models with a single different attribute and measuring the minimum, maximum, standard deviation and mean accuracy scores.
 ## Results
 
 ## Conclusions
