@@ -117,14 +117,22 @@ _Lesion: Lupus_
 </div>
 
 ------------------------------------------------------------------------------------------
-_Patient: 616
-Lesion: Lupus_
+_Patient: 616_
+
+_Lesion: Lupus_
 
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image05.png?raw=true" width="684" height="205">
 </div>
 
 ------------------------------------------------------------------------------------------
+_Patient: 621_
+
+_Lesion: Lupus_
+
+<div align="center">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image06.png?raw=true" width="684" height="205">
+</div>
 
 ## Conclusions
 
