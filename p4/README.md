@@ -94,7 +94,7 @@ The first thing to notice is that each given patient has multiple images, and th
 The model used was training with the original 581 images from the 50 stroke patients and the 630 images from the 51 multiple sclerosis ones. No image normalization method was used since it proved inefficient in our previous study. However, the attributes were normalized using the z-score method so its values are closer distributed.
 
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image02.png?raw=true" width="300" height="200">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image02.png?raw=true" width="400" height="400">
 </div>
 
 
