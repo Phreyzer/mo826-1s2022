@@ -45,6 +45,8 @@ As we can see the no normalization method had a better result since the mean acc
 
 Our next step is to compare each feature to determine the best attributes to the model. We do this also running 100 models with a single different attribute and measuring the minimum, maximum, standard deviation and mean accuracy scores.
 
+<div align="center">
+
 Attribute|Mean|Min|Max|Std
 -|-|-|-|-
 Kurtosis|91.31|80.00|99.62|4.26
@@ -59,7 +61,9 @@ Dissimilarity|76.89|66.09|86.76|4.40
 ASM|75.15|51.97|85.42|4.80
 Energy|74.77|61.90|86.36|3.99
 Homogeinity|72.31|58.97|82.03|4.05
+</div>
 
+The kurtosis showed the best performance with a 91.31% mean accuracy score and never dropping below 80%. After also trying a combination of the top performers we arrive at the following result.
 
 ## Results
 
