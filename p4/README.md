@@ -19,7 +19,7 @@ Wilson Bagni Junior | 010097 | Computer Science
 
 The objective of the project is, using a classifier trained to differentiate ischemic (named as AVC) and demyelinating lesions (named as EM), to identify the most likely etiology of the lesions present in Systemic Lupus Erythematosus (SLE) patients.
 
-## Methodoly 
+## Methodology 
 
 We are provided a folder with labeled medical images and a respective mask to extract the lesion. The mask select a Region of Interest (ROI) in the image.
 The images were separated by patient and then in two groups (Train and Validation). The images were splitted in a way that there wasn't images from the same patient in the two groups at same time.
