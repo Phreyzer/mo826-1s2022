@@ -103,7 +103,7 @@ _Patient: 601_
 _Lesion: Lupus_
 
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image03.jpg?raw=true" width="684" height="245">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image03.png?raw=true" width="684" height="245">
 </div>
 
 ------------------------------------------------------------------------------------------
