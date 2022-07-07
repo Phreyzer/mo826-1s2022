@@ -74,6 +74,18 @@ Skewness,Kurtosis,Entropy|90.84|74.62|98.98|4.67
 Skewness,Kurtosis|90.50|77.99|99.59|4.54
 </div>
 
+As the table above shows there was no real gain from when we used a single attribute. Thus, We will then attempt to train the final svm model only with the kurtosis for simplicity and performance.
+
+The kurtosis of a distribution is commonly interpreted as being related to the shape of the curve. Matematically, its given by the equation $k = \mu_4/\sigma^4$, where $\mu_4$ is the fourth moment of the distribution and $\sigma$ is the standard deviation. Distributions with a negative excess kurtosis, that is, kurtosis minus 3, are called platykurtic and tends to have a tinner tail, meaning that it produces fewer extreme outliers. On the other hand, distributions with a positive kurtosis are known as leptokurtic and have a "fatter tail", producing more extreme outliers. The normal distribution is called mesokurtic and have a excess kurtosis of 0.
+
+(img)
+
+
+
+The dataset was again ramdonly split into a 80-20 proportion of patients for training and test, the kurtosis was extracted from the image of the lesion (that is, we applyied the mask into the image to obtain only the lesion, and also throwed out the zero pixels with the idea that the model should only be exposed to information of the lesions themselves to be able to distinguish them) and normalized before being given to the classifier.
+
+The final svm had a accuracy score of 91.2% on the testing set, and will be used to classify lesion types from lupus into stroke or multiple sclerosis.
+
 ## Results
 
 ## Conclusions
