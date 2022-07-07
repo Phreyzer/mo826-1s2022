@@ -25,9 +25,9 @@ Brain lesions are a type of damage to the brain that may be caused, among other 
 
 A common way of diagnosing these types of lesions is through imaging of the brain, such as computed tomography (CT) and magnetic resonance imaging (MRI). These images are then examined by a doctor who will classify the type of lesion. With this approach in mind, our first proposal is to train a machine learning model to learn how distinguish between brain lesions caused by stroke and multiple sclerosis, evaluate the performance and relevant attributes being used in the decision making with the hope of a better medical insight into these brain lesions. The second step consists in using the trained model to classify lupus lesions into either a stroke or multiple sclerosis, with the objective of finding similarities that these types of lesions may share.
 
-
-
 ## Methodology 
+
+We were given an initial folder with medical images of brain lesions caused by two conditions, stroke (AVC) and multiple sclerosis (EM). Our first goal consists in using this dataset to training a svm model to classify a brain lesion into these two classes. We begin by taking the complete collection of patients and randomly splitting them in a 80-20 proportion for the training and test sets (the split was made by patient and not by image to avoid the same patient being used in both the training and test sets). With both sets defined we need to decide on a image normalization approach, for this we trained 100 models with each method and display the statistics of the accuracy in the table below.
 
 ## Results
 
