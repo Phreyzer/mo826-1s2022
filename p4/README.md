@@ -79,7 +79,7 @@ As the table above shows there was no real gain from when we used a single attri
 The kurtosis of a distribution is commonly interpreted as being related to the shape of the curve. Matematically, its given by the equation $k = \mu_4/\sigma^4$, where $\mu_4$ is the fourth moment of the distribution and $\sigma$ is the standard deviation. Distributions with a negative excess kurtosis, that is, kurtosis minus 3, are called platykurtic and tends to have a tinner tail, meaning that it produces fewer extreme outliers. On the other hand, distributions with a positive kurtosis are known as leptokurtic and have a "fatter tail", producing more extreme outliers. The normal distribution is called mesokurtic and have a excess kurtosis of 0.
 
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/Imagem.png?raw=true" width="400" height="400">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image01.jpg?raw=true" width="400" height="400">
 </div>
 
 
