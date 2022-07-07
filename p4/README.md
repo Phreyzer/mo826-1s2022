@@ -104,7 +104,7 @@ The model used was training with the original 581 images from the 50 stroke pati
 
 As we can see from the histogram above the model classified around 55% of the images as multiple sclerosis and 45% as stroke. Lets display the flairs for 4 different patients and the corresponding svm classification label and kurtosis value.
 
-**Image 3** - Histogram of the prediction of lupus images.
+**Image 3** - Patient 601 flairs.
 _Patient: 601_
 
 _Lesion: Lupus_
@@ -114,6 +114,7 @@ _Lesion: Lupus_
 </div>
 
 ------------------------------------------------------------------------------------------
+**Image 4** - Patient 604 flairs.
 _Patient: 604_
 
 _Lesion: Lupus_
@@ -123,6 +124,7 @@ _Lesion: Lupus_
 </div>
 
 ------------------------------------------------------------------------------------------
+**Image 5** - Patient 616 flairs.
 _Patient: 616_
 
 _Lesion: Lupus_
@@ -132,6 +134,7 @@ _Lesion: Lupus_
 </div>
 
 ------------------------------------------------------------------------------------------
+**Image 6** - Patient 621 flairs.
 _Patient: 621_
 
 _Lesion: Lupus_
@@ -142,6 +145,7 @@ _Lesion: Lupus_
 
 The images suggest that a frontier exists around a kurtosis value of 10, where an image with a value higher than 10 gets classified as a stroke lesion and a lower value as multiple sclerosis. To confirm our hipotesis lets plot the distribution of kurtosis values for each lesion type.
 
+**Image 7** - Kurtosis comparison for the three kinds of brain lesions.
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image07.png?raw=true" width="716" height="277">
 </div>
