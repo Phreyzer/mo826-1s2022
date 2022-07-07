@@ -82,6 +82,7 @@ As the table above shows there was no real gain from when we used a single attri
 The kurtosis of a distribution is commonly interpreted as being related to the shape of the curve. Matematically, its given by the divison of the fourth moment of the distribution and the standard deviation to the fourth power. Distributions with a negative excess kurtosis, that is, kurtosis minus 3, are called platykurtic and tends to have a tinner tail, meaning that it produces fewer extreme outliers. On the other hand, distributions with a positive kurtosis are known as leptokurtic and have a "fatter tail", producing more extreme outliers. The normal distribution is called mesokurtic and have a excess kurtosis of 0.
 
 **Image 1** - Example of kurtosis.
+
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image01.jpg?raw=true" width="300" height="200">
 </div>
@@ -98,6 +99,7 @@ The first thing to notice is that each given patient has multiple images, and th
 The model used was training with the original 581 images from the 50 stroke patients and the 630 images from the 51 multiple sclerosis ones. No image normalization method was used since it proved inefficient in our previous study. However, the attributes were normalized using the z-score method so its values are closer distributed.
 
 **Image 2** - Histogram of the prediction of lupus images.
+
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image02.png?raw=true" width="375" height="248">
 </div>
@@ -105,6 +107,7 @@ The model used was training with the original 581 images from the 50 stroke pati
 As we can see from the histogram above the model classified around 55% of the images as multiple sclerosis and 45% as stroke. Lets display the flairs for 4 different patients and the corresponding svm classification label and kurtosis value.
 
 **Image 3** - Patient 601 flairs.
+
 _Patient: 601_
 
 _Lesion: Lupus_
@@ -115,6 +118,7 @@ _Lesion: Lupus_
 
 ------------------------------------------------------------------------------------------
 **Image 4** - Patient 604 flairs.
+
 _Patient: 604_
 
 _Lesion: Lupus_
@@ -125,6 +129,7 @@ _Lesion: Lupus_
 
 ------------------------------------------------------------------------------------------
 **Image 5** - Patient 616 flairs.
+
 _Patient: 616_
 
 _Lesion: Lupus_
@@ -135,6 +140,7 @@ _Lesion: Lupus_
 
 ------------------------------------------------------------------------------------------
 **Image 6** - Patient 621 flairs.
+
 _Patient: 621_
 
 _Lesion: Lupus_
