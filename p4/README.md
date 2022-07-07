@@ -147,4 +147,6 @@ As we suspected the kurtosis values for multiple sclerosis (EM) images are more 
 
 Evaluating the performance of the svm classifier using only the kurtosis as attribute, we got on average above 90% accuracy, suggesting that this attribute was a good choice for this problem. Observing the meaning of kurtosis in a distribution we can infer that on stroke (AVC) images the pixels are more narrowly located in a specific range, with a fewer pixels outside these values. In contrast, the relative low values for the kurtosis on multiple sclerosis (EM) suggests that these kind of lesion images have a wider range of pixel values. We can go further and hypothesise that brain lesions caused by a stroke creates a more homogeneous scar tissue while multiple sclerosis is more likely to cause a more heterogeneous lesion.
 
+It is also important to note the possibility of this result being a reflection of a possible bias from the dataset, where one class of lesion naturally darker or lighter than the other.
+
 
