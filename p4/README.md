@@ -23,6 +23,8 @@ Brain lesions are a type of damage to the brain that may be caused, among other 
 2. Multiple Sclerosis - A condition where lesions appear in multiple areas of the brain.
 3. Lupus - An autoimmune disease with multiple manifestations and that can cause brain lesions.
 
+A common way of diagnosing these types of lesions is through imaging of the brain, such as computed tomography (CT) and magnetic resonance imaging (MRI). These images are then examined by a doctor who will classify the type of lesion. With this approach in mind, our first proposal is to train a machine learning model to learn how distinguish between brain lesions caused by stroke and multiple sclerosis, evaluate the performance and relevant attributes being used in the decision making with the hope of a better medical insight into these brain lesions. The second step consists in using the trained model to classify lupus lesions into either a stroke or multiple sclerosis, with the objective of finding similarities that these types of lesions may share.
+
 
 
 ## Methodology 
