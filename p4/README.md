@@ -98,6 +98,8 @@ The first thing to notice is that each given patient has multiple images, and th
 
 The model used was training with the original 581 images from the 50 stroke patients and the 630 images from the 51 multiple sclerosis ones. No image normalization method was used since it proved inefficient in our previous study. However, the attributes were normalized using the z-score method so its values are closer distributed.
 
+Now we will attempt to classify images of brain lesions caused by lupus using the trained svm. The classifier will clearly get every label wrong, since its only capable of labeling a image either a stroke or multiple sclerosis. However, our goal is to detect similarities between lesions caused by lupus and the ones caused by other conditions, and we can profit from trying to understand the process that makes the algorithm classify one class as the other. 
+
 **Image 2** - Histogram of the prediction of lupus images.
 
 <div align="center">
