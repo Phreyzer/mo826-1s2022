@@ -106,44 +106,41 @@ The model used was training with the original 581 images from the 50 stroke pati
 
 As we can see from the histogram above the model classified around 55% of the images as multiple sclerosis and 45% as stroke. Lets display the flairs for 4 different patients and the corresponding svm classification label and kurtosis value.
 
-**Image 3** - Patient 601 flairs.
-
 _Patient: 601_
 
 _Lesion: Lupus_
 
+**Image 3** - Patient 601 flairs.
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image03.png?raw=true" width="684" height="205">
 </div>
 
 ------------------------------------------------------------------------------------------
-**Image 4** - Patient 604 flairs.
-
 _Patient: 604_
 
 _Lesion: Lupus_
 
+**Image 4** - Patient 604 flairs.
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image04.png?raw=true" width="684" height="205">
 </div>
 
 ------------------------------------------------------------------------------------------
-**Image 5** - Patient 616 flairs.
-
 _Patient: 616_
 
 _Lesion: Lupus_
 
+**Image 5** - Patient 616 flairs.
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image05.png?raw=true" width="684" height="205">
 </div>
 
 ------------------------------------------------------------------------------------------
-**Image 6** - Patient 621 flairs.
-
 _Patient: 621_
 
 _Lesion: Lupus_
+
+**Image 6** - Patient 621 flairs.
 
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image06.png?raw=true" width="684" height="205">
