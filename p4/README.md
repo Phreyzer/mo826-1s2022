@@ -78,8 +78,9 @@ As the table above shows there was no real gain from when we used a single attri
 
 The kurtosis of a distribution is commonly interpreted as being related to the shape of the curve. Matematically, its given by the equation $k = \mu_4/\sigma^4$, where $\mu_4$ is the fourth moment of the distribution and $\sigma$ is the standard deviation. Distributions with a negative excess kurtosis, that is, kurtosis minus 3, are called platykurtic and tends to have a tinner tail, meaning that it produces fewer extreme outliers. On the other hand, distributions with a positive kurtosis are known as leptokurtic and have a "fatter tail", producing more extreme outliers. The normal distribution is called mesokurtic and have a excess kurtosis of 0.
 
-(img)
-
+<div align="center">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/Imagem.png?raw=true" width="400" height="400">
+</div>
 
 
 The dataset was again ramdonly split into a 80-20 proportion of patients for training and test, the kurtosis was extracted from the image of the lesion (that is, we applyied the mask into the image to obtain only the lesion, and also throwed out the zero pixels with the idea that the model should only be exposed to information of the lesions themselves to be able to distinguish them) and normalized before being given to the classifier.
