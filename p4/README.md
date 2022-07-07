@@ -29,6 +29,14 @@ A common way of diagnosing these types of lesions is through imaging of the brai
 
 We were given an initial folder with medical images of brain lesions caused by two conditions, stroke (AVC) and multiple sclerosis (EM). Our first goal consists in using this dataset to training a svm model to classify a brain lesion into these two classes. We begin by taking the complete collection of patients and randomly splitting them in a 80-20 proportion for the training and test sets (the split was made by patient and not by image to avoid the same patient being used in both the training and test sets). With both sets defined we need to decide on a image normalization approach, for this we trained 100 models with each method and display the statistics of the accuracy in the table below.
 
+Method|Min|Max|Mean|Std
+-|-|-|-|-
+Normal|60.869565|97.991968|90.281728|6.087545
+MinMax|64.5283082|98.734177|89.771374|5.069562
+DS|44.758065|96.511628|83.148129|13.452082
+ZS|45.588235|94.809689|79.300250|13.104043
+Tanh|48.571429|94.901961|81.477037|11.744619
+
 ## Results
 
 ## Conclusions
