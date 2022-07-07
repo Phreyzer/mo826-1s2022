@@ -137,8 +137,10 @@ _Lesion: Lupus_
 The images suggest that a frontier exists around a kurtosis value of 10, where an image with a value higher than 10 gets classified as a stroke lesion and a lower value as multiple sclerosis. To confirm our hipotesis lets plot the distribution of kurtosis values for each lesion type.
 
 <div align="center">
-<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image07.png?raw=true" width="684" height="205">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image07.png?raw=true" width="716" height="277">
 </div>
+
+As we suspected the kurtosis values for multiple sclerosis (EM) images are more heavily distributed closer to 0 and the kurtosis for stroke (AVC) tends to have a higher value. When attempting to classify the lupus images we can assume that the svm has learned to diagnose as stroke (AVC) images with a kurtosis higher than a certain threshold and as multiple sclerosis below this value.
 
 
 ## Conclusions
