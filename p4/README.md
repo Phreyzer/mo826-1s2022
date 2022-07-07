@@ -30,7 +30,7 @@ A common way of diagnosing these types of lesions is through imaging of the brai
 
 We were given an initial folder with medical images of brain lesions caused by two conditions, stroke (AVC) and multiple sclerosis (EM). Our first goal consists in using this dataset to training a svm model to classify a brain lesion into these two classes. We begin by taking the complete collection of patients and randomly splitting them in a 80-20 proportion for the training and test sets (the split was made by patient and not by image to avoid the same patient being used in both the training and test sets). With both sets defined we need to decide on a image normalization approach, for this we trained 100 models with each method and display the statistics of the accuracy in the table below.
 
-**Tabela 1** - Accuracy statistics for different image normalization methods.
+**Table 1** - Accuracy statistics for different image normalization methods.
 <div align="center">
  
 Method|Min|Max|Mean|Std
@@ -46,6 +46,7 @@ As we can see the no normalization method had a better result since the mean acc
 
 Our next step is to compare each feature to determine the best attributes to the model. We do this also running 100 models with a single different attribute and measuring the minimum, maximum, standard deviation and mean accuracy scores.
 
+**Table 2** - Accuracy statistics for different attributes.
 <div align="center">
 
 Attribute|Mean|Min|Max|Std
@@ -66,6 +67,7 @@ Homogeinity|72.31|58.97|82.03|4.05
 
 The kurtosis showed the best performance with a 91.31% mean accuracy score and never dropping below 80%. After also trying a combination of the top performers we arrive at the following result.
 
+**Table 3** - Accuracy statistics for different combinations of attributes.
 <div align="center">
 	
 Combination|Mean|Min|Max|Std
@@ -79,6 +81,7 @@ As the table above shows there was no real gain from when we used a single attri
 
 The kurtosis of a distribution is commonly interpreted as being related to the shape of the curve. Matematically, its given by the divison of the fourth moment of the distribution and the standard deviation to the fourth power. Distributions with a negative excess kurtosis, that is, kurtosis minus 3, are called platykurtic and tends to have a tinner tail, meaning that it produces fewer extreme outliers. On the other hand, distributions with a positive kurtosis are known as leptokurtic and have a "fatter tail", producing more extreme outliers. The normal distribution is called mesokurtic and have a excess kurtosis of 0.
 
+**Image 1** - Example of kurtosis.
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image01.jpg?raw=true" width="300" height="200">
 </div>
@@ -94,12 +97,14 @@ The first thing to notice is that each given patient has multiple images, and th
 
 The model used was training with the original 581 images from the 50 stroke patients and the 630 images from the 51 multiple sclerosis ones. No image normalization method was used since it proved inefficient in our previous study. However, the attributes were normalized using the z-score method so its values are closer distributed.
 
+**Image 2** - Histogram of the prediction of lupus images.
 <div align="center">
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image02.png?raw=true" width="375" height="248">
 </div>
 
 As we can see from the histogram above the model classified around 55% of the images as multiple sclerosis and 45% as stroke. Lets display the flairs for 4 different patients and the corresponding svm classification label and kurtosis value.
 
+**Image 3** - Histogram of the prediction of lupus images.
 _Patient: 601_
 
 _Lesion: Lupus_
