@@ -88,6 +88,8 @@ The final svm had a accuracy score of 91.2% on the testing set, and will be used
 
 ## Results
 
+The first thing to notice is that each given patient has multiple images, and the svm will attempt to classify each image separately, so it's possible that the model will diagnose the same patient with different lesion types depending on the given flair. This is not a problem since our focus here is to study the criteria that it uses to decide on a diagnosis, and looking at different flairs with different diagnosis of the same patient might give us an insight into what the model considers relevant in classifying.
+
 ## Conclusions
 
 
