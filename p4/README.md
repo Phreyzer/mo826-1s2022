@@ -134,6 +134,13 @@ _Lesion: Lupus_
 <img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image06.png?raw=true" width="684" height="205">
 </div>
 
+The images suggest that a frontier exists around a kurtosis value of 10, where an image with a value higher than 10 gets classified as a stroke lesion and a lower value as multiple sclerosis. To confirm our hipotesis lets plot the distribution of kurtosis values for each lesion type.
+
+<div align="center">
+<img src="https://github.com/Phreyzer/mo826-1s2022/blob/main/p4/assets/image07.png?raw=true" width="684" height="205">
+</div>
+
+
 ## Conclusions
 
 
